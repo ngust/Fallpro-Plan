@@ -1,0 +1,16 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Section 7 -  Rescue</span>
+        <br>
+        <span class="onsite-header onsite-small"> Confirmation of rescue availability is the responsibility of the supervisor listed on this document</span>
+      </div>
+
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+  <div >
+    <%= render 'rescue_desk', f: f %>
+  </div>
+
+<%= f.submit "Save and Submit", name: "rescue", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>

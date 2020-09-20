@@ -1,0 +1,129 @@
+	<div id="fallpro-radio"> 
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td class="fallpro-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">1</td>
+					<td colspan="9"><span>
+						Who is to be contacted if rescue is needed</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<div class="form-group">
+						<%= f.label :contact_name, "Name" %>
+						<%= f.text_field :contact_name, required: true %>
+					</div>	
+					<div class="form-group">
+						<%= f.label :contact_number, "Phone Number" %>
+						<%= f.text_field :contact_number, required: true %>
+					</div>	
+					<div class="form-group">
+						<%= f.label :contact_position, "Position" %>
+						<%= f.text_field :contact_position, required: true %>
+					</div>	
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">2</td>
+					<td colspan="9"><span>
+						To summon first aid</span>
+						
+					 </td>
+					
+			</tr>
+
+			<tr>
+				<td colspan="10" class="nowrap">
+					<div class="form-group">
+						<%= f.label :airhorn_location, "Use airhorn located at: " %>
+						<%= f.text_field :airhorn_location, required: true %>
+					</div>	
+					<div class="form-group">
+						<%= f.label :radio_location, "Use radio located at: " %>
+						<%= f.text_field :radio_location, required: true %>
+					</div>	
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">3</td>
+					<td colspan="9"><span>
+						Sketch area – show the shape of area, the hazards, controls zones and anchor points with lines to show what anchor point to use for what area.</span>
+						
+					 </td>
+					
+			</tr>
+
+			<tr>
+				<td colspan="10" class="nowrap">
+					<div class="form-group">
+						Do you want to upload a sketch or draw one on the final report?
+					</div>	
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :sketch_upload do %>
+						<%= f.radio_button :sketch_upload , false, required: true %>
+						Draw Sketch on Printed Plan
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :sketch_upload  do %>
+						<%= f.radio_button :sketch_upload , true %>
+						Upload Image of Sketch
+					<% end %>
+				</td>
+			</tr>
+
+			<tr id="fallpro-upload-sketch">
+				<td colspan="10" class="nowrap">
+					<%= f.label :sketch  do %>
+						<%= f.file_field :sketch , class: 'form-control exam_forms' %>
+						Upload Image of your sketch
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">4</td>
+					<td colspan="9"><span>
+						Additional Information</span>
+						
+					 </td>
+					
+			</tr>
+
+			<tr>
+				<td colspan="10" class="nowrap">
+					<div class="form-group">
+						<%= f.label :add_info, "Add any additional notes (optional)" %><br>
+						<%= f.text_area :add_info, style: "width: 100%; height: 300px;" %>
+					</div>	
+				
+				</td>
+			</tr>
+
+			
+			
+	
+			</table>
+		</div>

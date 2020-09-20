@@ -1,0 +1,53 @@
+	<div id="fallpro-radio"> 
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td class="fallpro-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">1</td>
+					<td colspan="9"><span>
+						As the supervisor listed in section 1, <%= @fallpro.supervisor %>, I confirm that all workers listed below have reviewed, participated in the creation of and will follow this site specific fall protection plan.  If the scope or conditions change, I will modify the plan and review it with those involved.  I will also supervise or designate a person to supervise the crew that is following this plan.
+						</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<div class="field" style="margin: 25px auto;">
+                    <p>By signing below I confirm the above statment.</p>
+                    
+                    <%= f.hidden_field :signature, value: nil, id: "signature_pad_input"%>
+                 
+                    <div class="signature_pad text-center">
+                      <div class="signature_pad_body" id="signature_pad_canvas_body">
+                        <canvas id="signature_canvas"></canvas>
+                      </div>
+                      <div class="signature_pad_footer">
+                        <div class="text-muted">Sign above</div>
+                        <button type="button" class="btn btn-default signature_pad_clear">Clear</button>
+                      </div>
+                    </div>
+                   </div>
+					
+				</td>
+			</tr>
+
+
+
+			
+
+			
+	
+			</table>
+		</div>

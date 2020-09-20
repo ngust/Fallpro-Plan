@@ -1,0 +1,39 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Section 5 - Setting up and taking down the system</span>
+      </div>
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+  <div >
+    <%= render 'setup_desk', f: f %>
+  </div>
+
+<%= f.submit "Save and Submit", name: "setup", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>
+
+
+ <script>
+  $( function() {
+    $('#fallpro_steps_reverse_false').click(function() {
+      test = $(this).prop("checked")
+      show_steps(test)
+    });
+    $('#fallpro_steps_reverse_true').click(function() {
+      test = $('#fallpro_steps_reverse_false').prop("checked")
+      show_steps(test)
+    });
+   
+    function show_steps(test) {
+      console.log(test)
+      steps = $('#enter_reverse_steps')
+      if (test == true) {
+        steps.addClass('super-button-clicked')
+        steps.show(200)
+      } else {
+      steps.removeClass('super-button-clicked')
+      steps.hide(100)
+      }
+    };
+  });
+</script>

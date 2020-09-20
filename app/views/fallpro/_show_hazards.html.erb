@@ -1,0 +1,97 @@
+<% fallpro = @fallpro %>
+<% hazard = @hazard %>
+	<div id="fallpro-form-fields"> 
+		<table  class="table toolbox_pdf_table fallpro-table">
+			<tr id="empty-row">
+				<td class="covid-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<td colspan="20" class="fallpro-show-title">
+						Section 2 -  Fall Hazards – what can hurt you or others
+						<%= link_to "Edit",   edit_fallpro_fallpro_hazard_path(fallpro_id: @fallpro, fallpro_hazard_id: @hazard, id: @hazard), remote: true, class: "btn btn-primary exam_button obs-edit-button" %>
+					</td>
+			<tr >
+			</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Distance</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						The distance to the next lower surface is <%= @hazard.height %> <%= @hazard.units %>.  We will be working on a <%= @hazard.surface %>.
+					</td>
+					
+				</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Dropped objects</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @hazard.can_drop %>
+							There is a risk of dropped objects striking <%= @hazard.drop_strike %>.
+						<% else %>
+							At time of the assessment there was no risk of dropped objects striking someone or something.
+						<% end %>	
+					</td>
+					
+				</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Power Lines</span>
+					 </td>
+					
+					<% if @hazard.power_lines %>
+						<td colspan="15" >
+							There is potential for workers or materials to enter the limits of approach for high voltage.  Prior to working using this fall protection plan <%= @fallpro.supervisor %> will review additional procedures with the workers to ensure this hazard is controlled.
+						</td>
+						<td colspan="2" class="fallpro-initials">
+							Supervisor Initials
+						</td>
+					<% else %>
+						<td colspan="17" >
+							At time of assessment there was no recognized risk of workers or worker materials/tools entering the limits of approach for powerlines, even in the event of a worker being suspended by his/her fall protection system.
+						</td>
+					<% end %>						
+				</tr>	
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Openings and shafts</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @hazard.holes %>
+							At time of assessment we found that there was an additional hazard that included floor openings, shafts or holes.  To control these hazards we will <%= @hazard.hole_control %>.
+						<% else %>
+							At time of assessment there was no floor openings, shafts, holes found in the area.
+						<% end %>	
+					</td>
+					
+				</tr>
+			
+			</table>
+		</div>

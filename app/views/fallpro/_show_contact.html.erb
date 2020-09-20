@@ -1,0 +1,81 @@
+<% fallpro = @fallpro %>
+	<div id="fallpro-form-fields"> 
+		<table  class="table toolbox_pdf_table fallpro-table">
+			<tr id="empty-row">
+				<td class="covid-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<td colspan="20" class="fallpro-show-title">
+						Section 8 - Contact
+						<%= link_to "Edit",   fallpro_fallpro_edit_contact_path(fallpro_id: @fallpro), remote: true, class: "btn btn-primary exam_button obs-edit-button no_pdf" %>
+					</td>
+			<tr >
+			</tr>
+		
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Who is to be contacted if rescue is needed</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						Name: <%= @fallpro.contact_name %><br>
+						Phone Number: <%= @fallpro.contact_number %><br>
+						Position: <%= @fallpro.contact_position %>
+					</td>
+					
+					
+				</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						To Summon First Aid</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.airhorn_location.present? %>
+							<p>Airhorn Location: <%= @fallpro.airhorn_location %></p>
+						<% end %>
+						<% if @fallpro.radio_location.present? %>
+							<p>Radio Location: <%= @fallpro.radio_location %></p>
+						<% end %>
+					</td>
+					
+				</tr>
+				<tr >
+					<td colspan="20" >
+						<span>Sketch area – show the shape of area, the hazards, controls zones and anchor points with lines to show what anchor point to use for what area.</span>
+						<div class="obs-image-wrapper no_pdf">
+				  			<%= print_image (@fallpro.sketch_url.to_s)  %>
+					  </div>
+					   <div class="obs-image-wrapper pdf_only">
+					  		<%= image_tag(@fallpro.sketch_url.to_s, height: "400px")  %>
+					  </div>
+					</td>
+			    </tr>
+			
+			
+			
+			</table>
+		</div>

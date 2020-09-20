@@ -1,0 +1,177 @@
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8" />
+<meta name="pdfkit-margin_top" content="0.5in"/>
+<meta name="pdfkit-margin_right" content="0.12in"/>
+<meta name="pdfkit-margin_bottom" content="0.5in"/>
+<meta name="pdfkit-margin_left" content="0.12in"/>
+
+<div class="container">
+	<div class="no_pdf">
+		<%= link_to "Generate PDF", fallpro_fallpro_print_report_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
+	</div>
+	<div class="no_pdf">
+		<%= link_to "Send Emails", fallpro_fallpro_emails_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
+	</div>
+	
+	<div class="cert_top_header" style="clear:both;">
+	</div>
+
+
+	<div class="cert_top_header">
+		<img src="http://qrsafety.com/public/assets/fallpro_logo.JPG">
+		<div class="no_pdf">
+			<span id="site-inspection-top-header-span">Fall Protection Plan</span>
+		</div>
+		<div class="pdf_only">
+			<span id="site-inspection-top-header-span" style="font-size: 22px;">Fall Protection Plan</span>
+		</div>
+		<div class="site-inspection-top-header">
+				<table  class="inspection-header-table">
+				<tr>
+					<td>Date:  <%= @fallpro.created_at? ? @fallpro.created_at.strftime("%b %d, %Y") : Date.today.strftime("%b %d, %Y")  %></td>
+				</tr>
+			</table>
+		</div>
+		<div class="site-inspection-top-header-mobile no_pdf">
+				<table  class="inspection-header-table">
+				<tr>
+					<td>Date:  <%= @fallpro.created_at? ? @fallpro.created_at: Date.today  %></td>
+				</tr>
+			</table>
+		</div>
+		<div class="cert_top_header" style="clear:both;">
+			<p class="cert_header_left">FallProPlan.com</p>
+			<p class="cert_header_right ">Powered by:   604-299-8217 | info@wethesafe.com | wethesafe.com</p>
+		</div>
+	</div>
+
+	<div id="site_inspection_overview"> 
+		<table  class="table toolbox_pdf_table concerns-table" id="site-ins-overview">
+			<tr id="empty-row">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+			</tr>
+<!-- 			<tr>
+				<td colspan="6" style="width: 100%; padding: 2px 12px;" class="toolbox_pdf_header pdf-gray"><span>Overview</span></td>
+			</tr> -->
+				<tr >
+					<td colspan="1" class="pdf-light-gray">Company Name</td>
+					<td colspan="2"><%= @fallpro.company %></td>
+					<td colspan="1" class="pdf-light-gray">Plan Created by</td>
+					<td colspan="2"><%= @fallpro.supervisor %></td>
+					
+					
+				</tr>
+
+				<tr >
+					<td colspan="1" class="pdf-light-gray">Project</td>
+					<td colspan="2"><%= @site ? @site.project : "error" %></td>
+					
+					<td colspan="1" class="pdf-light-gray">Address</td>
+					<td colspan="2"><%=  @site ? @site.address : "error"  %></td>
+				</tr>
+
+				<tr >
+					<td colspan="1" class="pdf-light-gray">Site Safety Coordinator</td>
+					<td colspan="2"><%= @site ? @site.cso_name : "error" %></td>
+					
+					<td colspan="1" class="pdf-light-gray">Safety Coordinator Phone #</td>
+					<td colspan="2"><%= @site ? @site.cso_phone : "error" %></td>
+				</tr>
+
+				<tr >
+					<td colspan="2" class="pdf-light-gray">Who is filling out this form</td>
+					<td colspan="6"><%= @site ? @site.work_desc : "error" %></td>
+					
+				</tr>
+			
+				
+				
+		</table>
+	</div>
+
+	<div class="tbt-responsive no_pdf" id="site_inspection_overview_mobile">
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+				
+		</table>
+	</div>
+
+	<%= render 'show_table', fallpro: @fallpro, site: @site %>
+	<%= render 'show_hazards', fallpro: @fallpro, hazard: @hazard %>
+	<%= render 'show_systems', fallpro: @fallpro %>
+	<%= render 'show_items', fallpro: @fallpro %>
+	<%= render 'show_setup', fallpro: @fallpro %>
+	<%= render 'show_inspection', fallpro: @fallpro %>
+	<%= render 'show_rescue', fallpro: @fallpro %>
+	<%= render 'show_contact', fallpro: @fallpro %>
+	<%= render 'show_workers' %>
+		<div id="no-page-break">
+			<table  class="table toolbox_pdf_table concerns-table">
+				<tr id="empty-row">
+					<td ></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="4" class="toolbox_pdf_header "><span>Additional Information</span></td>
+				</tr>
+				<tr>
+					<td colspan="4"><%= @fallpro.add_info %></td>
+					
+				</tr>
+				
+	
+			</table>
+		</div>
+	<div class="tbt-responsive">
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td ></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr >
+				<td colspan="2">
+					Plan filled out by: <%= @fallpro.supervisor %>
+				</td>
+				<td colspan="2">
+
+				<% if @fallpro.signature && @fallpro.signature.length > 10 %>
+					<%= image_tag @fallpro.signature, class: "event_show_signature" %>
+				<% else %>
+					<span class="rental_thin" style="color: red; font-weight: 900">No Signature</span>
+				<% end %>
+
+				</td>
+			
+			</tr>
+			<tr>
+				<td colspan="4">
+					<p>Disclaimer:</p>
+					<p>FallProPlan.com is a series of questions that should be answered prior to working at heights.  It is intended to help a qualified person complete a fall protection plan.  It is not the only questions and is not a replacement for proper supervision or training.  Prior to working in any hazardous environment, it is the responsibility of the supervisor to complete an assessment and implement the controls needed to reduce the risk.</p>
+
+					<p>FallProPlan.com may be a part of this total solution however is not to be the only part of it.
+FallProPlan.com and We the Safe Consulting Inc. does not guarantee, in any way, that the plan created with our system is complete or that it meets the entire requirements for any regulatory requirements or company rules.  Furthermore, it is not possible for FallProPlan.com or We the Safe Consulting Inc.  to confirm that any of the information entered is correct or that the actions stated are performed.
+Users of FallProPlan.com use it at their own risk.</p>
+
+				</td>
+			</tr>
+
+			
+		
+		</table>
+
+</div> <!-- close container -->

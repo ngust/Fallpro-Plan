@@ -1,0 +1,22 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Email Completed Plans</span>
+        <p>You can send PDF copies of this Fall Pro Plan to as many recipients as you wish.  Check that the Fall Pro Plan is complete and accurate before you send the emails.</p>
+      </div>
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+<div>
+		<p>Enter email addresses:</p>
+		<%= f.fields_for :fallpro_emails do |email| %>
+	      <%= render 'fallpro_email_fields', f: email %>
+	    <% end %>
+	    <div class="links">
+	  <%= link_to_add_association 'add email', f, :fallpro_emails %>
+	</div>
+</div>
+<div class="no_pdf">
+<%= link_to "Return to FallProPlan", fallpro_fallpro_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
+</div>
+<%= f.submit "Send PDF Plan to Recipients", name: "emails", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>

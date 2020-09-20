@@ -1,0 +1,8 @@
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+  <div >
+    <%= render 'setup_desk', f: f %>
+  </div>
+
+<%= f.submit "Save ", name: "setupedit", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>

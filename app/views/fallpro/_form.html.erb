@@ -1,0 +1,68 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Section 1: Site and Supervisor Information</span>
+      </div>
+<%=form_for @fallpro, :url => url_for(:controller => 'fallpro', :action => 'create')do |f| %>
+
+<% if @fallpro.errors.any? %>
+    <div id="error_explanation" style="margin-top: 50px;">
+      <h2><%= pluralize(@fallpro.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% @fallpro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <div class="form-group onsite-forms">
+            <div  id="user-fields">
+    <div>
+      <%= f.label :company, "What company will be using this plan?" %><br>
+      <%= f.text_field :company, required: true, class: 'form-control exam_forms' %>
+    </div>
+    <!-- Are you the supervisor for workers using this plan?
+    <div class="super-buttons">
+      <%= link_to "Yes", "#", class: "btn btn-primary exam_button", id: "yes-super"  %>
+      <%= link_to "No", "#", class: "btn btn-primary exam_button", id: "no-super" %>
+      </div> -->
+      <div style="clear: both; margin-bottom: 25px;"></div>
+<!--     <div style="display: none;" id="super-form"> -->
+      <%= f.label :supervisor, "Enter the supervisor's name:" %><br>
+      <%= f.text_field :supervisor, required: true, class: 'form-control exam_forms' %>
+<!--     </div> -->
+    
+    
+
+    <div style="clear: both; margin-bottom: 25px;"></div>
+    <div>
+       <%= f.submit "Next Step", class: 'btn btn-success btn-lg btn-block ipad-button ' %>  
+    </div>
+  </div>
+  <% end %>
+
+
+  <script>
+  $( function() {
+    $('#yes-super').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#no-super').removeClass('super-button-clicked')
+      $('#super-form').hide()
+      });
+
+    $('#no-super').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#yes-super').removeClass('super-button-clicked')
+      $('#super-form').show()
+      });
+  });
+</script>

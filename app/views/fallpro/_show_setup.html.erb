@@ -1,0 +1,121 @@
+<% fallpro = @fallpro %>
+	<div id="fallpro-form-fields"> 
+		<table  class="table toolbox_pdf_table fallpro-table">
+			<tr id="empty-row">
+				<td class="covid-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<td colspan="20" class="fallpro-show-title">
+						Section 5 - Setting up and taking down the system
+						<%= link_to "Edit",   fallpro_fallpro_edit_setup_path(fallpro_id: @fallpro), remote: true, class: "btn btn-primary exam_button obs-edit-button" %>
+					</td>
+			<tr >
+				<td colspan="20">A safe (from falls) area is an area that has no hazards, as defined by your local regulatory body.  It is typically an area that has no fall hazard or has all fall hazards controlled.</td>
+			</tr>
+		
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Equipment Instructions</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.all_read  %>
+							 All workers involved have read the instructions for each item in the system.
+						<% else %>
+							 Our team has not read the instructions for our equipment, we will not proceed.
+						<% end %>	
+					</td>
+					
+				</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Safe Area</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.safe_area %>
+							 My personal fall protection system can be set up and dismantled in a safe area.
+						<% else %>
+							My personal fall protection system cannot be set up and dismantled See your supervisor – additional procedures are required to control the hazards.
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Parts Compatibility</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.parts_compatible %>
+							We have confirmed that all the parts of the fall protection system are compatible with each other.
+						<% else %>
+							We have not confirmed that all the parts of our fall protection system are compatible.  We will not proceed.
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Steps to set up Fall Protection System</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<ul>
+							<% @fallpro.fallpro_steps.order(:order).each do |step| %>
+								<li><%= step.body.html_safe %></li>
+							<% end %>
+						</ul>
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Steps to take down Fall Protection System</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<ul>
+							<% if @fallpro.steps_reverse %>
+								<% @fallpro.fallpro_steps.order(:order).reverse_order.each do |step| %>
+									<li><%= step.body.html_safe %></li>
+								<% end %>
+							<% else %>
+								<% @fallpro.fallpro_reverse_steps.order(:order).each do |step| %>
+									<li><%= step.body.html_safe %></li>
+								<% end %>
+							<% end %>
+						</ul>
+					</td>
+					
+				</tr>
+			
+			
+			</table>
+		</div>

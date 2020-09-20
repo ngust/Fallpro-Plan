@@ -1,0 +1,6 @@
+<div class="nested-fields" style="margin: 15px auto">
+	<% order = f.object.order.present? ? f.object.order : @count %>
+	<%= f.hidden_field :order, value: order %>
+	<%= f.text_field :body, style: "width: 80%;" %>
+	<%= link_to_remove_association (image_tag "error.png"), f, class: "remove_answer",  data: {confirm: 'Remove step?'} %>
+</div>

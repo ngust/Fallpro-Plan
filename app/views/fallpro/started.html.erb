@@ -1,0 +1,53 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Thank You</span></br>
+        <span class="onsite-header onsite-small">Lets get started with your plan</span>
+
+
+
+  <div class="form-group onsite-forms">
+            <div  id="user-fields">
+
+    Can you eliminate the work at heights by changing your work process?
+    <div class="super-buttons" id="started-buttons">
+      <%= link_to "Yes", "#", class: "btn btn-primary exam_button", id: "yes-super"  %>
+      <%= link_to "No", "#", class: "btn btn-primary exam_button", id: "no-super" %>
+      </div>
+      <div style="clear: both;"></div>
+    <div style="display: none;" id="super-yes-form">
+      <span>Great.  Then do it.  Your fall protection plan is complete.
+    </div>
+        <div style="display: none;" id="super-no-form">
+      <span>OK.  We'll continue to develop a fall protection plan.
+
+        <div>
+           <%= link_to "Next Step",  fallpro_fallpro_site_roof_path(@site), class: 'btn btn-success btn-lg btn-block ipad-button ' %>  
+        </div>
+    </div>
+  
+
+  </div>
+</div>
+
+
+  <script>
+  $( function() {
+    $('#yes-super').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#no-super').removeClass('super-button-clicked')
+      $('#super-no-form').hide()
+      $('#super-yes-form').show()
+      });
+
+    $('#no-super').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#yes-super').removeClass('super-button-clicked')
+      $('#super-no-form').show()
+      $('#super-yes-form').hide()
+      });
+  });
+</script>

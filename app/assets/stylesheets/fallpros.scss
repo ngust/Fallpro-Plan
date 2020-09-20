@@ -1,0 +1,248 @@
+// Place all the styles related to the fallpros controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$sling-red: #212529;
+
+.super-buttons{
+	// width: 40%;
+	float: right;
+
+	a {
+
+	}
+}
+
+#started-buttons {
+	width: 100;
+	float: none;
+	margin: 0 auto;
+}
+
+.super-button-clicked {
+	background: #28a745 !important;
+	    border: 3px solid  #28a745 !important;
+}
+
+#lifeline_length {
+	display: none;
+}
+
+#feet-meters {
+	width: 100px;
+	display: inline-block;
+	height: 43px;
+	margin-left: 25px;
+	    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s 
+}
+
+@media screen and (max-width: 700px) {
+	.super-buttons{
+		width: 100%;
+	}
+
+}
+
+#fallpro-radio {
+	.nowrap {
+		// white-space: nowrap !important;
+	}
+	input[type='radio'] { 
+		transform: scale(1.4); 
+		margin: 0 25px  !important;
+	}
+	i {
+		margin-left: 8px;
+		color: $sling-red;
+	}
+	span {
+		color: $sling-red;
+		font-weight: 900;
+	}
+	label {
+		margin-right: 8px;
+		color: $sling-red;
+		font-weight: 900;
+	}
+}
+
+
+.fallpro-numbers {
+	padding: 1.25rem !important;
+	vertical-align: middle !important;
+	// max-width: 20px !important;
+}
+
+#enter_reverse_steps {
+	display: none;
+}
+
+.do-not-proceed {
+	background: yellow;
+	text-align: center;
+	padding: 10px;
+	// display: none;
+}
+
+.concerns-table {
+	td {
+		width: 5%;
+	}
+}
+
+.fallpro-numbers {
+	padding: 1.25rem !important;
+    vertical-align: middle !important;
+    width: 52px !important;
+}
+
+#fallpro-form-fields {
+	.nowrap {
+		white-space: nowrap !important;
+	}
+	input[type='radio'] { transform: scale(1.4); }
+	i {
+		margin-left: 8px;
+		// color: $sling-red;
+	}
+	span {
+		// color: $sling-red;
+		font-weight: 900;
+	}
+	label {
+		margin-right: 8px;
+		// color: $sling-red;
+		// font-weight: 200;
+	}
+}
+
+.fallpro-show-title {
+	font-weight: 800;
+	text-align: center;
+}
+.fallpro-initials {
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+#fallpro-upload-sketch {
+	display: none;
+}
+
+// Landing page
+.fallpro-landing-header {
+	text-align: center;
+	span {
+		font-family: "raleway";
+		font-size: 32px;
+		font-weight: 400;
+	}
+}
+
+.fallpro-landing-logo {
+	width: 300px;
+	margin: 0 auto;
+	img {
+		width: 100%;
+	}
+}
+
+.fallpro-landing-column {
+	text-align: center;
+	padding: 50px 0 !important;
+}
+
+.fallpro-landing-column-inner {
+	border: 1px solid;
+	padding: 30px 15px;
+	width: 350px;
+	margin: 0 auto;
+	span {
+		font-family: "raleway";
+		font-size: 24px;
+		font-weight: 800;
+		display: block;
+		@media screen and (max-width: 1200px) {
+			font-size: 18px;
+		}
+	}
+	hr {
+		border-top: 2px solid #8888f0;
+	}
+	ul {
+		text-align: left;
+		list-style: none;
+	}
+
+	ul li:before {
+	  content: '✓';
+	  font-weight: 800;
+	  padding-right: 15px;
+	}
+	.fallpro-landing-button {
+		background: #2bfd4b;
+		padding: 10px 40px;
+		box-shadow: 1px 1px black;
+		color: white;
+		font-weight: 700;
+		font-size: 24px;
+	}
+	a {
+		width: 300px !important;
+		height: 83px !important;
+	}
+
+}
+
+.fallpro-landing-item {
+	max-width: 250px;
+	margin: 0 auto;
+	height: 300px;
+	img {
+		width: 100%;
+	}
+	ul {
+	  padding-top: 25px;
+	  li:before {
+	  content: '•';
+	  font-weight: 800;
+	  padding-right: 15px;
+	}
+	}
+	@media screen and (max-width: 1200px) {
+		// height: 400px;
+		ul {
+			padding-left: 0;
+		}
+	}
+
+}
+
+.fallpro-landing-items {
+	padding: 0 25px !important;
+	.fallpro-landing-column-inner {
+			width: auto;
+	}
+}
+
+.fallpro-items-row {
+	margin: 50px auto;
+}
+
+.fallpro-gray {
+	ul {
+		li {
+			color: gray;
+		}
+		li:before {
+		  content: '✘';
+		  font-weight: 800;
+		  padding-right: 15px;
+		}
+	}
+}

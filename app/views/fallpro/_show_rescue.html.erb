@@ -1,0 +1,120 @@
+<% fallpro = @fallpro %>
+	<div id="fallpro-form-fields"> 
+		<table  class="table toolbox_pdf_table fallpro-table">
+			<tr id="empty-row">
+				<td class="covid-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<td colspan="20" class="fallpro-show-title">
+						Section 7 - Rescue
+						<%= link_to "Edit",   fallpro_fallpro_edit_rescue_path(fallpro_id: @fallpro), remote: true, class: "btn btn-primary exam_button obs-edit-button no_pdf" %>
+					</td>
+			<tr >
+			</tr>
+		
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Technical or High Angle Rescue</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if  @fallpro.rescue %>
+							If someone were to fall a  technical rescue / high angle rescue might be required.
+						<% else %>
+							If someone were to fall a technical rescue / high angle rescue <strong>would not</strong> be required.
+						<% end %>
+					</td>
+					
+					
+				</tr>
+				<% if  @fallpro.rescue %>
+					<tr >
+						<td class="pdf-light-gray" colspan="3"><span>
+							Rescue Methods</span>
+						 </td>
+						
+						<td colspan="17" >
+							The following rescue methods may be required:
+							<ul>
+								<% if @fallpro.how_rescue && @fallpro.how_rescue.length > 0 %>
+									<% @fallpro.how_rescue.each do |res| %>
+									  <li>
+									  	<%= 
+									  	case res.to_i
+											when 1
+											  "Site DEP box"
+											when 2
+											  "Mobile equipment"
+											when 3
+											  "Emergency services (fire department)"
+											when 4
+											  "Rolling scaffolding"
+											when 5
+											  "Other"
+											
+											else
+											  "Error"
+										end
+											%>
+									  		
+									  </li>
+									<% end %>
+								<% else %>
+									<span style="color: red;">Error</span>
+								<% end %>
+							</ul>
+						</td>
+						
+					</tr>
+					<tr >
+						
+						
+						
+						<td colspan="20" >
+							<h4>Fallen Worker Guidelines</h4>
+							<p>If you fall or see a fallen worker hanging from their system follow these steps</p>
+							<ol>
+								<li>Stay calm and ensure you don’t put your self at risk.</li>
+								<li>Talk to the suspended worker</li>
+								<li>Notify safety person or supervisor with this info
+									<ul>
+										<li>Location of worker – as detailed as possible – what level?</li>
+										<li>Time worker fell – as close to as possible</li>
+										<li>Level of consciousness of suspended worker</li>
+										<li>Injuries, if any</li>
+									</ul>
+								</li>
+								<li>If you can do it safely provide the worker with a secondary connection</li>
+								<li>Stay with worker</li>
+
+							</ol>
+						</td>
+					</tr>
+				<% end %>
+				
+			
+			
+			</table>
+		</div>

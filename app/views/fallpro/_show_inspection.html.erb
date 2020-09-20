@@ -1,0 +1,89 @@
+<% fallpro = @fallpro %>
+	<div id="fallpro-form-fields"> 
+		<table  class="table toolbox_pdf_table fallpro-table">
+			<tr id="empty-row">
+				<td class="covid-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<td colspan="20" class="fallpro-show-title">
+						Section 6 - Maintenance and Inspection Requirements
+						<%= link_to "Edit",   fallpro_fallpro_edit_inspection_path(fallpro_id: @fallpro), remote: true, class: "btn btn-primary exam_button obs-edit-button no_pdf" %>
+					</td>
+			<tr >
+			</tr>
+		
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Equipment Instructions</span>
+					 </td>
+						<% if @fallpro.equipment_inspected  %>
+							<td colspan="17" >
+								All components of the fall protection system have been inspected following manufacturer’s instructions.
+							</td>
+						<% else %>
+							<td colspan="15" >
+							  Inspection of equipment is required before use – see your supervisor.
+							</td>
+							 <td colspan="2" class="fallpro-initials">
+								Supervisor Initials
+							</td>
+						<% end %>	
+					</td>
+					
+				</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Anchor Strength</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.strong_enough %>
+							 The structure we are anchoring to has been deemed strong enough.
+						<% else %>
+							The structure we are anchoring to has <strong>not</strong> been deemed strong enough.
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Re-inspection After Breaks</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.after_breaks%>
+							We will re-inspect all of our fall protection equipment after any breaks.
+						<% else %>
+							We will <strong>not</strong>re-inspect all of our fall protection equipment after any breaks.
+						<% end %>	
+					</td>
+					
+				</tr>
+				
+			
+			
+			</table>
+		</div>

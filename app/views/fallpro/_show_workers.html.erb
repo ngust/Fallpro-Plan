@@ -1,0 +1,38 @@
+	<div id="no-page-break">
+			<table  class="table toolbox_pdf_table concerns-table">
+				<tr id="empty-row">
+					<td ></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="toolbox_pdf_header ">Company Name: <%=@fallpro.company %></td>
+					<td colspan="1" class="toolbox_pdf_header "><%= FallproSite.find_by(fallpro: @fallpro.id).address %></td>
+					<td><%= @fallpro.created_at? ? @fallpro.created_at.strftime("%b %d, %Y") : Date.today.strftime("%b %d, %Y")  %></td>
+				</tr>
+				<tr>
+					<td colspan="4" class="toolbox_pdf_header "><span>WORKER SIGN-IN: Print so we can read it please</span></td>
+				</tr>
+				<tr>
+					<td>Print Name</td>
+					<td>Signature</td>
+					<td>Print Name</td>
+					<td>Signature</td>
+				</tr>
+				
+					<% work_count = 10 
+					work_count = work_count / 2%>
+					<% count = 1 %>
+					<% work_count.times do %>
+						<tr>
+							<td><%= count %></td>
+							<td></td>
+							<td><%= work_count  + count %></td>
+							<td></td>
+						</tr>
+						<% count += 1 %>
+					<% end %>
+	
+			</table>
+		</div>

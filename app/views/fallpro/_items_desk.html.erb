@@ -1,0 +1,333 @@
+	<div id="fallpro-radio"> 
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td class="fallpro-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">1</td>
+					<td colspan="9"><span>
+						Anchor structure – the actual structure you are using</span>
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_structure do %>
+						<%= f.radio_button :anchor_structure, "concrete", required: true %>
+						Concrete
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_structure do %>
+						<%= f.radio_button :anchor_structure, "wood" %>
+						Wood
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_structure do %>
+						<%= f.radio_button :anchor_structure, "steel" %>
+						Steel
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_structure do %>
+						<%= f.radio_button :anchor_structure, "", id: "item_anchor_structure_radio" %>
+						<%= text_field_tag 'name', nil,  id: "item_anchor_structure_input" %>
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">2</td>
+					<td colspan="9"><span>
+						Anchor connection – what you are using to connect to the structure</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_connection do %>
+						<%= f.radio_button :anchor_connection, "web strap", required: true %>
+						Web strap
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_connection do %>
+						<%= f.radio_button :anchor_connection, "cable" %>
+						Cable
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_connection do %>
+						<%= f.radio_button :anchor_connection, "nail / screw down anchor" %>
+						Nail / screw down anchor
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_connection do %>
+						<%= f.radio_button :anchor_connection, "bolt or wedge anchor" %>
+						Bolt or wedge anchor
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_connection do %>
+						<%= f.radio_button :anchor_connection, "beam slider" %>
+						Beam slider
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :anchor_connection do %>
+						<%= f.radio_button :anchor_connection, "", id: "item_anchor_connection_radio" %>
+						<%= text_field_tag 'name', nil,  id: "item_anchor_connection_input" %>
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">3</td>
+					<td colspan="9"><span>
+						Will you be using a full body harness?</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :full_body_harness do %>
+						<%= f.radio_button :full_body_harness, false, required: true %>
+						No – it is not practicable for us to use fall arrest for this work
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :full_body_harness do %>
+					<%= f.radio_button :full_body_harness, false %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">4</td>
+					<td colspan="9"><span>
+						What connects you to the anchor?</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :connect_anchor do %>
+						<%= f.radio_button :connect_anchor, "retractable device", required: true %>
+						Retractable device – you will most likely be in fall arrest with this type of device
+					<% end %>
+				</td>
+			</tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :connect_anchor do %>
+						<%= f.radio_button :connect_anchor, "lifeline" %>
+						Lifeline
+					<% end %>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" style="padding: 0;">
+					<table  class="" id="lifeline_length">
+						<tr>
+							<td colspan="10" class="nowrap"  id="lifeline_title">
+								Lifeline Length
+								<tr>
+									<td colspan="10" class="nowrap">
+										<%= f.label :lifeline do %>
+											<%= f.radio_button :lifeline, "25'" %>
+											25'
+										<% end %>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="10" class="nowrap">
+										<%= f.label :lifeline do %>
+											<%= f.radio_button :lifeline, "50'" %>
+											50'
+										<% end %>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="10" class="nowrap">
+										<%= f.label :lifeline do %>
+											<%= f.radio_button :lifeline, "100'" %>
+											100'
+										<% end %>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="10" class="nowrap">
+										<%= f.label :lifeline do %>
+											other length:
+											<%= f.text_field :lifeline %>
+											
+										<% end %>
+									</td>
+								</tr>
+									
+							
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">5</td>
+					<td colspan="9"><span>
+						Rope grab/ fall arrestor</span>
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :rope_grab do %>
+						<%= f.radio_button :rope_grab , true, required: true %>
+						Yes – I will use correct lanyard for the device
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :rope_grab  do %>
+						<%= f.radio_button :rope_grab , false %>
+						No
+					<% end %>
+				</td>
+			</tr>
+
+				<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">6</td>
+					<td colspan="9"><span>
+						Lanyard</span>
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :lanyard do %>
+						<%= f.radio_button :lanyard , true, required: true %>
+						Yes – I will use an energy absorbing lanyard if fall arrest
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :lanyard_type  do %>
+					    A specific lanyard needed:
+						<%= f.text_field :lanyard_type %>
+					<% end %>
+				</td>
+			</tr>
+
+				<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">7</td>
+					<td colspan="9"><span>
+						Tool lanyard/ tether</span>
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :tool_lanyard do %>
+						<%= f.radio_button :tool_lanyard , true, required: true %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :tool_lanyard  do %>
+						<%= f.radio_button :tool_lanyard , false %>
+						No
+					<% end %>
+				</td>
+			</tr>
+
+				<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">8</td>
+					<td colspan="9"><span>
+						Material tie back/ down system</span>
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :matarial_tie do %>
+						<%= f.radio_button :matarial_tie , true, required: true %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :matarial_tie  do %>
+						<%= f.radio_button :matarial_tie , false %>
+						No
+					<% end %>
+				</td>
+			</tr>
+
+					<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">8</td>
+					<td colspan="9"><span>
+						Controls zone</span>
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :control_zone_item do %>
+						<%= f.radio_button :control_zone_item , true, required: true %>
+						Yes – we will use a highly visible line that is set back from edge and raised
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :control_zone_item  do %>
+						<%= f.radio_button :control_zone_item , false %>
+						No
+					<% end %>
+				</td>
+			</tr>
+	
+			</table>
+		</div>
+
+
+

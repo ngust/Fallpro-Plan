@@ -1,0 +1,78 @@
+	<div id="fallpro-radio"> 
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td class="fallpro-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">1</td>
+					<td colspan="9"><span>
+						If you were to fall or collapse (heart attack) would you need a technical rescue/ high angle rescue? Most fall arrest systems will require technical rescue</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :rescue do %>
+						<%= f.radio_button :rescue, false, required: true %>
+						No – the next question may not be applicable 
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :rescue do %>
+						<%= f.radio_button :rescue, true %>
+						Yes – fill out the next question
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">2</td>
+					<td colspan="9"><span>
+						How will you be rescued – choose as many as needed</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :how_rescue do %>
+						<%= f.check_box :how_rescue, {multiple: true}, 1, nil %>
+						Site DEP box
+					<% end %><br>
+					<%= f.label :how_rescue do %>
+						<%= f.check_box :how_rescue, {multiple: true}, 2, nil %>
+						Mobile equipment
+					<% end %><br>	
+					<%= f.label :how_rescue do %>
+						<%= f.check_box :how_rescue, {multiple: true}, 3, nil %>
+						Emergency services (fire department)
+					<% end %><br>
+					<%= f.label :how_rescue do %>
+						<%= f.check_box :how_rescue, {multiple: true}, 4, nil %>
+						Rolling scaffolding
+					<% end %><br>
+					<%= f.label :how_rescue do %>
+						<%= f.check_box :how_rescue, {multiple: true}, 5, nil %>
+						Other
+					<% end %>	
+						
+				
+				</td>
+			</tr>
+			
+	
+			</table>
+		</div>

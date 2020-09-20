@@ -1,0 +1,53 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Section 4: What items do you need for your system</span>
+      </div>
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+  <div >
+    <%= render 'items_desk', f: f %>
+  </div>
+
+<%= f.submit "Save and Submit", name: "items", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>
+
+
+ <script>
+  $( function() {
+    $('#fallpro_connect_anchor_lifeline').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#lifeline_title').addClass('super-button-clicked')
+      $('#lifeline_length').show(200)
+      });
+
+    $('#fallpro_connect_anchor_retractable_device').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#lifeline_title').removeClass('super-button-clicked')
+      $('#lifeline_length').hide(100)
+      });
+
+    $('#fallpro_connect_anchor_lifeline').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#lifeline_title').addClass('super-button-clicked')
+      $('#lifeline_length').show(200)
+      });
+
+    $('#item_anchor_structure_input').change(function() {
+      console.log("anchor test running");
+      text = $(this).val()
+      $('#item_anchor_structure_radio').val(text)
+    });
+    $('#item_anchor_connection_input').change(function() {
+      console.log("anchor conection test running");
+      text = $(this).val()
+      $('#item_anchor_connection_radio').val(text)
+    });
+  });
+</script>

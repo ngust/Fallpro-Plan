@@ -1,0 +1,35 @@
+<div class="container-fluid content_dashboard">
+<%= link_to "Add FallPro Plan", new_fallpro_fallpro_path, class: "btn btn-primary exam_button", style: "width:auto;float: left"  %>
+  <br />
+  <br /> <br />
+  <div class="table-responsive" style="clear:both;">
+    <table class="table table-hover">
+      <tr>
+
+         <th>ID</th>
+        
+        <th>Email</th>
+        <th>Signature</th>
+        <th>Date Completed</th>
+        <th>View FPP</th>
+        <th>Manage</th>
+
+      </tr>
+
+       <% @fallpros.each do |fp|  %>
+      <tr>
+
+        <td><%=fp.id %></td>
+        <td><%= fp.user.email %></td>
+        <td><%= fp.company %></td>
+        <td><%= fp.created_at.strftime("%b %d, %Y")  %></td>
+        <td><%= link_to 'View Plan', fallpro_fallpro_path(fp) %></td>
+        <td>(<%= link_to "edit", edit_fallpro_fallpro_path(fp) %>, <%= link_to "delete", fallpro_fallpro_path(fp), method: :delete, data: {confirm: "Are you sure you want to delete #{fp.id}?"} %>)</td>
+
+      <% end %>
+
+    </table>
+  </div>
+
+            <hr>
+</div>

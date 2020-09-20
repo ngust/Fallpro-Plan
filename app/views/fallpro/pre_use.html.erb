@@ -1,0 +1,13 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Section 6 -  Pre-use inspection</span>
+      </div>
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+  <div >
+    <%= render 'pre_use_desk', f: f %>
+  </div>
+
+<%= f.submit "Save and Submit", name: "pre_use", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>

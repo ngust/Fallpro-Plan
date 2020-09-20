@@ -1,0 +1,169 @@
+<% fallpro = @fallpro %>
+	<div id="fallpro-form-fields"> 
+		<table  class="table toolbox_pdf_table fallpro-table">
+			<tr id="empty-row">
+				<td class="covid-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<td colspan="20" class="fallpro-show-title">
+						Section 4 - Gear needed for this plan
+						<%= link_to "Edit",   fallpro_fallpro_edit_gear_path(fallpro_id: @fallpro), remote: true, class: "btn btn-primary exam_button obs-edit-button" %>
+					</td>
+			<tr >
+			</tr>
+		
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Anchorage</span>
+					 </td>
+					
+					
+					<td colspan="15" >
+						The item that is ultimately taking the force will be <%= @fallpro.anchor_structure %>.
+
+						Prior to using this fall protection plan your supervisor will have to confirm anchorage strength.
+					</td>
+					<td colspan="2" class="fallpro-initials">
+							Confirmed Initials
+						</td>
+					
+				</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Anchorage Connector</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						The item that connects me to the anchorage wil be <%= @fallpro.anchor_connection %>.
+					</td>
+					
+				</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Person Connection to Anchor</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						To connect me to the anchor we will be using a <%= @fallpro.connect_anchor %>.
+					</td>
+					
+				</tr>
+
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Full Body Harness</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.full_body_harness %>
+							Yes
+						<% else %>
+							No
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Rope grab / Fall arrestor</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.rope_grab %>
+							To connect to the lifeline we will use a rope grab.  We will use the lanyard specified on the rope grab instructions.
+						<% else %>
+							It is not practicable for us to use a rope grab / fall arrestor for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Lanyard</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.lanyard %>
+							Lanyards to be used are <%= @fallpro.lanyard_type %>.
+						<% else %>
+							It is not practicable for us to use a lanyard for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Tool Lanyards</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.tool_lanyard %>
+							We will be using tool lanyards
+						<% else %>
+							It is not practicable for us to use tool lanyards for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Material tie back / down system</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.matarial_tie %>
+							We will be using a material tie back / down system.
+						<% else %>
+							At time of assessment it was not necessary  for us to use  material tie back / down system for this work.
+						<% end %>	
+					</td>
+					
+				</tr>				
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Controls Zone</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.control_zone_item %>
+							We will use a highly visible line that is set back 6.5 feet from edge and raised.
+						<% else %>
+							It is not practicable for us to use  control zone for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+			
+			
+			</table>
+		</div>

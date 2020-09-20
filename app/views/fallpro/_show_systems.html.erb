@@ -1,0 +1,114 @@
+<% fallpro = @fallpro %>
+	<div id="fallpro-form-fields"> 
+		<table  class="table toolbox_pdf_table fallpro-table">
+			<tr id="empty-row">
+				<td class="covid-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<td colspan="20" class="fallpro-show-title">
+						Section 3 - Using the hierarchy of controls, these are the system(s) we will use
+						<%= link_to "Edit",   fallpro_fallpro_edit_systems_path(fallpro_id: @fallpro), remote: true, class: "btn btn-primary exam_button obs-edit-button" %>
+					</td>
+			<tr >
+			</tr>
+		
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Guardrails</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.gaurdrails %>
+							 Guardrails will be used and we will follow the regulations, engineered documents or manufacturers instructions.
+						<% else %>
+							 It is not practicable for us to use guardrails for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+			<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+						Fall restraint</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.fall_restraint %>
+							 Fall restraint will be used and we will follow the regulations, engineered documents and/or manufacturers instructions.
+						<% else %>
+							It is not practicable for us to use fall restraint for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Fall Arrest</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.fall_arrest %>
+							Fall arrest will be used and we will follow the regulations, engineered documents or manufacturers instructions.
+						<% else %>
+							It is not practicable for us to use fall arrest for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Control Zone for Fall Protection</span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.control_zone %>
+							We will control the area below our work using a control zone. We are aware of the regulations regarding control zones.
+						<% else %>
+							It is not practicable for us to use a control zone for fall arrest for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+				<tr >
+					<td class="pdf-light-gray" colspan="3"><span>
+							Control Zone for Dropped Items </span>
+					 </td>
+					
+					
+					<td colspan="17" >
+						<% if @fallpro.control_drop_zone %>
+							We will limit the area to only those who have reviewed this plan. We are aware of the regulations regarding control zones.
+						<% else %>
+							It is not practicable for us to use a control zone for dropped items for this work.
+						<% end %>	
+					</td>
+					
+				</tr>
+			
+			
+			</table>
+		</div>

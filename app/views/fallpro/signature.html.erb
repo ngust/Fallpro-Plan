@@ -1,0 +1,94 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Section 9 - Signature</span>
+      </div>
+
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+  <div >
+    <%= render 'signatures_desk', f: f %>
+  </div>
+
+<%= f.submit "Save and Submit", name: "signature", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>
+
+
+
+<script>
+  $( function() {
+      ///////////  Signature Pad //////////
+      var height
+      var width
+          function size(){
+            width = $('form').width();
+            console.log("form load width ----> " + width)
+            height = $(".signature_pad_body").height()
+            console.log("height ----> " + height)
+          };
+
+          function resizeCanvas(canvas) {
+            var ratio =  Math.max(window.devicePixelRatio || 1, 1);
+            console.log(ratio);
+            console.log(window.devicePixelRatio)
+            console.log("canvas offsetWidth --> " + canvas.offsetWidth)
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            canvas.getContext("2d").scale(ratio, ratio);
+            //signaturePad.clear(); // otherwise isEmpty() might return incorrect value
+        }
+
+              // $('#new_event').on('shown.bs.modal', function () {
+              //   console.log("Modal Load ............")
+                 size()
+
+                  var canvas = document.getElementById("signature_canvas")
+                  if (canvas){
+                    console.log("if canvas ..............")
+                    console.log(canvas)
+
+                    canvas.height = height;
+                    canvas.width = width;
+                    signature_pad = new SignaturePad(
+                      canvas, {
+                      onEnd: function() {
+                        console.log("writing stuff ..............")
+                        console.log(signature_pad.toDataURL())
+                        var canvas = document.querySelector("canvas");
+                        console.log(canvas)
+                      }
+
+                      });
+                    window.onresize = resizeCanvas(canvas);
+                    resizeCanvas(canvas);
+                    console.log(signature_pad)
+                    $('.signature_pad_clear').click(function() { signature_pad.clear() });
+                    $('#signature_pad_save').click(function(event) { 
+                      console.log("submitting ..............")
+                      console.log("Pad empty ---> " + signature_pad.isEmpty())
+                      if (signature_pad.isEmpty()){
+                         console.log("Pad Empty ..........")
+                        alert('You must provide a signature');
+                        event.preventDefault();
+                      } else {
+                        $('#signature_pad_input').val(signature_pad.toDataURL('image/png'));
+                         console.log("the following is what shoud send ...")
+                         var payload = $('#signature_pad_input').val()
+                          console.log(payload)
+                      }
+                    });
+
+
+                  }
+
+      //////////////////////////////////////
+
+
+
+
+
+
+	
+
+    });
+</script>

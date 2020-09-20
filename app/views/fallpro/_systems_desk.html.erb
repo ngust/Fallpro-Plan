@@ -1,0 +1,149 @@
+	<div id="fallpro-radio"> 
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td class="fallpro-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">1</td>
+					<td colspan="9"><span>
+						Guardrails</span>
+						<!-- <ul>
+							<li>Fever</li>
+							<li>New onset or worsening of cough or other symptoms</li>
+							<li>Sneezing/Running Nose</li>
+							<li>Sore throat</li>
+							<li>Difficulty breathing</li>
+							<li>Severe Fatigue</li>
+							<li>Vomiting</li>
+						</ul> -->
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :gaurdrails do %>
+						<%= f.radio_button :gaurdrails, false, required: true %>
+						No – it is not practicable for us to use guardrails for this work
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :gaurdrails do %>
+						<%= f.radio_button :gaurdrails, true %>
+						Yes – we will follow the regulations, engineered documents or manufacturers instructions
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">2</td>
+					<td colspan="9"><span>
+						Fall restraint</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :fall_restraint do %>
+						<%= f.radio_button :fall_restraint, false, required: true %>
+						No – it is not practicable for us to use restraint for this work
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :fall_restraint do %>
+						<%= f.radio_button :fall_restraint, true %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">3</td>
+					<td colspan="9"><span>
+						Fall Arrest</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :fall_arrest do %>
+						<%= f.radio_button :fall_arrest, false, required: true %>
+						No – it is not practicable for us to use fall arrest for this work
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :fall_arrest do %>
+						<%= f.radio_button :fall_arrest, true %>
+						Yes - we will fill out the rescue section
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">4</td>
+					<td colspan="9"><span>
+						Control zone for fall protection</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :control_zone do %>
+						<%= f.radio_button :control_zone, false, required: true %>
+						No
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :control_zone do %>
+						<%= f.radio_button :control_zone, true %>
+						Yes – we will limit the area to only those who have reviewed this plan.  We are aware of the regulations regarding control zones
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">5</td>
+					<td colspan="9"><span>
+						Control zone below for dropped items</span>
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :control_drop_zone  do %>
+						<%= f.radio_button :control_drop_zone , false, required: true %>
+						No – it is not possible or effective.  We will use tethers and other controls
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :control_drop_zone  do %>
+						<%= f.radio_button :control_drop_zone , true %>
+						Yes 
+					<% end %>
+				</td>
+			</tr>
+	
+			</table>
+		</div>

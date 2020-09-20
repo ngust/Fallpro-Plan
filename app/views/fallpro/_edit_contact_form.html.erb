@@ -1,0 +1,27 @@
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+  <div >
+    <%= render 'contact_desk', f: f %>
+  </div>
+
+<%= f.submit "Save ", name: "contactedit", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>
+
+<script>
+  $( function() {
+    $('#fallpro_sketch_upload_true').click(function() {
+      test = $(this).prop("checked")
+      if (test) {
+      	$('#fallpro-upload-sketch').show(200)
+      }
+    });
+    $('#fallpro_sketch_upload_false').click(function() {
+      test = $(this).prop("checked")
+      if (test) {
+      	$('#fallpro-upload-sketch').hide(100)
+      }
+    });   
+   
+
+  });
+</script>

@@ -1,0 +1,2 @@
+class FallproEmail < ApplicationRecord
+end

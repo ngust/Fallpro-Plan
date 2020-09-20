@@ -1,0 +1,34 @@
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Section 8 - Contact Information</span>
+      </div>
+
+<%=form_for [:fallpro, @fallpro] do |f| %>
+
+  <div >
+    <%= render 'contact_desk', f: f %>
+  </div>
+
+<%= f.submit "Save and Submit", name: "contact", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
+<% end %>
+
+
+<script>
+  $( function() {
+    $('#fallpro_sketch_upload_true').click(function() {
+      test = $(this).prop("checked")
+      if (test) {
+      	$('#fallpro-upload-sketch').show(200)
+      }
+    });
+    $('#fallpro_sketch_upload_false').click(function() {
+      test = $(this).prop("checked")
+      if (test) {
+      	$('#fallpro-upload-sketch').hide(100)
+      }
+    });   
+   
+
+  });
+</script>

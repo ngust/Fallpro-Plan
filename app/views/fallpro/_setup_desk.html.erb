@@ -1,0 +1,155 @@
+	<div id="fallpro-radio"> 
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td class="fallpro-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">1</td>
+					<td colspan="9"><span>
+						Have all involved read the instructions for each item in the system?</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :all_read do %>
+						<%= f.radio_button :all_read, true, required: true %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :all_read do %>
+						<%= f.radio_button :all_read, false %>
+						No
+					<% end %>
+					<p>As the supervisor I will review the instructions with each person</p>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">2</td>
+					<td colspan="9"><span>
+						Will systems be set up and taken down while in a safe area – before getting to the edge?</span>
+						
+					 </td>
+					
+			</tr>
+									<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :safe_area do %>
+						<%= f.radio_button :safe_area, true, required: true %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :safe_area do %>
+						<%= f.radio_button :safe_area, false %>
+						No - Do not proceed
+					<% end %>
+				</td>
+			</tr>
+
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">3</td>
+					<td colspan="9"><span>
+						Are all the parts of the system compatible with each other?</span>
+					 </td>
+					
+			</tr>
+									<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :parts_compatible do %>
+						<%= f.radio_button :parts_compatible, true, required: true %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :parts_compatible do %>
+						<%= f.radio_button :parts_compatible, false %>
+						No - Do not proceed
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">4</td>
+					<td colspan="9"><span>
+						Write down the step by step for setting up your system</span>
+					 </td>
+					
+			</tr>
+			<tr >
+				<td colspan="10" class="nowrap">
+					<p>Enter Steps Here:</p>
+					<%= f.fields_for :fallpro_steps do |step| %>
+		              <%= render 'fallpro_step_fields', f: step %>
+		            <% end %>
+		            <div class="links">
+		          <%= link_to_add_association 'add step', f, :fallpro_steps %>
+		        </div>
+		        </td>
+	           
+			</tr>
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">5</td>
+					<td colspan="9"><span>
+						To disassemble the system can you reverse the set up steps?</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :steps_reverse  do %>
+						<%= f.radio_button :steps_reverse , true, required: true %>
+						Yes – we will follow the set up steps in reverse order
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :steps_reverse  do %>
+						<%= f.radio_button :steps_reverse , false %>
+						No
+					<% end %>
+				</td>
+			</tr>
+			<tr id="enter_reverse_steps">
+				<td colspan="10" class="nowrap">
+					<p>Enter Reverse Steps:</p>
+					<%= f.fields_for :fallpro_reverse_steps do |step| %>
+		              <%= render 'fallpro_reverse_step_fields', f: step %>
+		            <% end %>
+		            <div class="links">
+		          <%= link_to_add_association 'add step', f, :fallpro_reverse_steps %>
+		        </div>
+		        </td>
+	           
+			</tr>
+
+
+			
+			
+			</table>
+		</div>

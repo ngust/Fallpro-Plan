@@ -1,0 +1,120 @@
+	<div id="fallpro-radio"> 
+		<table  class="table toolbox_pdf_table concerns-table">
+			<tr id="empty-row">
+				<td class="fallpro-numbers"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td> 
+
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">1</td>
+					<td colspan="9"><span>
+						Is the structure you are anchoring to strong enough?  See local regulations and manufacturers instructions to confirm.</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :strong_enough do %>
+						<%= f.radio_button :strong_enough, true, required: true, class: "dnp-trigger", data: {yes_no: "yes"} %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :strong_enough do %>
+						<%= f.radio_button :strong_enough, false, class: "dnp-trigger", data: {yes_no: "no"} %>
+						No
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">2</td>
+					<td colspan="9"><span>
+						Has all the equipment, including tools and the connection devices for them, been inspected following the manufacturers instructions and passed?</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :equipment_inspected do %>
+						<%= f.radio_button :equipment_inspected, true, required: true, class: "dnp-trigger", data: {yes_no: "yes"} %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :equipment_inspected do %>
+						<%= f.radio_button :equipment_inspected, false, class: "dnp-trigger", data: {yes_no: "no"} %>
+						No
+					<% end %>
+				</td>
+			</tr>
+
+			<tr >
+					<td colspan="1" class="pdf-light-gray fallpro-numbers">3</td>
+					<td colspan="9"><span>
+						Will you be re-inspecting all your connections after any breaks?</span>
+						
+					 </td>
+					
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :after_breaks do %>
+						<%= f.radio_button :after_breaks, true, required: true, class: "dnp-trigger", data: {yes_no: "yes"} %>
+						Yes
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :after_breaks do %>
+						<%= f.radio_button :after_breaks, nil, class: "dnp-trigger", data: {yes_no: "yes"} %>
+						Not Applicable
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :after_breaks do %>
+						<%= f.radio_button :after_breaks, false, class: "dnp-trigger", data: {yes_no: "no"} %>
+						No
+					<% end %>
+				</td>
+			</tr>
+
+	
+			</table>
+		</div>
+
+
+<script>
+  $( function() {
+    $('.dnp-trigger').click(function() {
+      checked = $(this).prop("checked")
+      data = $(this).data("yesNo")
+      that = $(this)
+      console.log(that)
+      console.log(checked)
+      console.log(data)
+      if (checked == true && data == "no") {
+      	that.parent().parent().append('<div class="do-not-proceed"><span>Do not proceed!</span></div>');
+      } else {
+      	$('.dnp-trigger').parent().parent().parent().find(".do-not-proceed").remove();
+      }
+      });
+  });
+</script>
