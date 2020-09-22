@@ -18,6 +18,16 @@ resources :fallpro do
     get :edit_contact
     get :emails
   end
+
+  resource :fallpro_users, only: [:new, :create]
+  resources :fallpro_sites do
+    get :roof
+    get :edit_roof 
+  end
+    resources :fallpro_hazards do
+      get :power_lines
+  end
+  
   # root to: 'users/sessions#new_user_session_path'
     # devise_scope :user do
       # root to: "devise/sessions#new"

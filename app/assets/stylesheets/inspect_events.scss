@@ -1,0 +1,66 @@
+// Place all the styles related to the inspect_events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.inspection-event-show {
+	 h4 {
+			 font-family: 'raleway';
+			 //  font-weight: 600;
+			  font-size: 25px;
+			  // color: #5a6068;
+			  color: #000;
+		}
+}
+
+.signature_pad_body {
+ // width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#signature_canvas {
+  width: 100%;
+  height: 100%;
+  border: dotted #444;
+  background: #CCCCCC;
+}
+
+.event_show_signature {
+	max-height: 100px;
+	width: 80%;
+}
+.event_display_step {
+	display: inline;
+	// margin-left: 25px;
+}
+
+.ins-steps-form {
+		display: inline;
+}
+
+.ins_profile_check {
+    height: 20px;
+    display: inline;
+    margin-right: 15px;
+    float:left;
+    padding: 5px 0 0 0;
+}
+.ins-step-show-wrapper {
+	display: block;
+	vertical-align: middle;
+
+}
+
+.inspect-checkout-buttons {
+	a {
+		    margin: 25px auto !important;
+		        height: 75px;
+		    width: 95%;
+
+		    font-family: raleway;
+		    font-weight: 800 !important;
+		    font-size: 35px !important;
+		    vertical-align: middle;;
+	}
+}

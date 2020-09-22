@@ -31,7 +31,7 @@
 				<td colspan="20" class="fallpro-show-title">
 						Section 1 -  Plan and Location Details
 						<% if site %>
-							<%= link_to "Edit",   fallpro_fallpro_site_edit_roof_path(fallpro_id: @fallpro, fallpro_site_id: site), remote: true, class: "btn btn-primary exam_button obs-edit-button" %>
+							<%= link_to "Edit",   fallpro_site_edit_roof_path(fallpro_id: @fallpro, fallpro_site_id: site), remote: true, class: "btn btn-primary exam_button obs-edit-button" %>
 						<% end %>
 					</td>
 			</tr>

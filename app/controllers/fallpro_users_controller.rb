@@ -8,7 +8,7 @@ class FallproUsersController < ApplicationController
 
 
 	 if @user.save
-	    redirect_to new_fallpro_fallpro_path, notice: "User Created successfully!"
+	    redirect_to new_fallpro_path, notice: "User Created successfully!"
 	  else
 	  logger.info "XXXXXX #{@user.errors.full_messages.to_sentence}"
 	  end

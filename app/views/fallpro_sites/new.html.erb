@@ -1,0 +1,138 @@
+
+<div class="container">
+      <div class="onsite-header-wrapper">
+                <span class="onsite-header">Fall Pro Plan</span></br>
+        <span class="onsite-header onsite-small">Section 1: Site and Supervisor Information</span>
+      </div>
+      <%= form_for @site do |f| %>
+      <% if @site.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
+
+          <ul>
+          <% @site.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+          <div class="form-group onsite-forms">
+            <div  id="user-fields">
+                  Are you on a construction site?
+              <div class="super-buttons">
+                <%= link_to "Yes", "#", class: "btn btn-primary exam_button", id: "yes-cons"  %>
+                <%= link_to "No", "#", class: "btn btn-primary exam_button", id: "no-cons" %>
+                </div>
+                <div style="clear: both;"></div>
+              <div  id="site-yes-form">
+                <div>
+                  <%= f.label :project, "Project Name" %><br>
+                  <%= f.text_field :project, required: true, class: 'form-control exam_forms' %>
+                </div>
+                <div>
+                  <%= f.label :address, "Project Address" %><br>
+                  <%= f.text_field :address, required: true, class: 'form-control exam_forms' %>
+                </div>
+                             <div>
+                  <%= f.label :prime, "Prime Contractor Name or Company in Charge" %><br>
+                  <%= f.text_field :prime, class: 'form-control exam_forms' %>
+                </div>
+                                 <div>
+                  <%= f.label :cso_name, "Safety coordinator/ CSO name" %><br>
+                  <%= f.text_field :cso_name, required: true, class: 'form-control exam_forms' %>
+                </div>
+                                 <div>
+                  <%= f.label :cso_phone, "CSO Phone Number" %><br>
+                  <%= f.text_field :cso_phone, required: true, class: 'form-control exam_forms' %>
+                </div>
+              </div>
+              <div style="display: none;" id="site-no-form">
+                <div>
+                  <%= f.label :project, "Location Description" %><br>
+                  <%= f.text_field :project, required: true, class: 'form-control exam_forms' %>
+                </div>
+                <div>
+                  <%= f.label :address, "Location Address" %><br>
+                  <%= f.text_field :address, required: true, class: 'form-control exam_forms' %>
+                </div>
+                <div>
+                  <%= f.label :cso_name, "Who is in charge of safety at this location?" %><br>
+                  <%= f.text_field :cso_name, required: true, class: 'form-control exam_forms' %>
+                </div>
+                                 <div>
+                  <%= f.label :cso_phone, "Safety Person Phone Number" %><br>
+                  <%= f.text_field :cso_phone, required: true, class: 'form-control exam_forms' %>
+                </div>
+              </div>
+
+              <div>
+                  <%= f.label :work_desc, "Who is in charge of safety at this location?" %><br>
+            <!--       This needs to be added to the model, 
+                  also Where (specifically) is the work taking place -->
+                  <%= f.text_field :work_desc, class: 'form-control exam_forms' %>
+                </div>
+
+              <%= f.hidden_field :fallpro, value: @fallpro  %>
+
+<div style="height:50px"></div>
+
+            <div>
+              <%= f.submit "Next Step", class: 'btn btn-success btn-lg btn-block ipad-button ' %> 
+            </div>
+        </div>
+      <% end %>
+
+</div>
+
+
+  <script>
+  $( function() {
+    $('#yes-cons').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#no-cons').removeClass('super-button-clicked')
+      $('#site-yes-form').show()
+      $('#site-no-form').hide()
+      });
+
+    $('#no-cons').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#yes-cons').removeClass('super-button-clicked')
+      $('#site-yes-form').hide()
+      $('#site-no-form').show()
+      });
+
+    $('[id=fallpro_site_project]').change(function() {
+      last = $(this).val()
+      $('[id=fallpro_site_project]').each(function(){
+        $(this).val(last)
+      });
+    });
+
+    $('[id=fallpro_site_address]').change(function() {
+      last = $(this).val()
+      $('[id=fallpro_site_address]').each(function(){
+        $(this).val(last)
+      });
+    });
+
+    $('[id=fallpro_site_cso_name]').change(function() {
+      last = $(this).val()
+      $('[id=fallpro_site_cso_name]').each(function(){
+        $(this).val(last)
+      });
+    });
+
+    $('[id=fallpro_site_cso_phone]').change(function() {
+      last = $(this).val()
+      $('[id=fallpro_site_cso_phone]').each(function(){
+        $(this).val(last)
+      });
+    });
+
+  });
+</script>

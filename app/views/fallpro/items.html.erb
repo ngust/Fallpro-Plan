@@ -3,7 +3,7 @@
                 <span class="onsite-header">Fall Pro Plan</span></br>
         <span class="onsite-header onsite-small">Section 4: What items do you need for your system</span>
       </div>
-<%=form_for [:fallpro, @fallpro] do |f| %>
+<%=form_for @fallpro do |f| %>
 
   <div >
     <%= render 'items_desk', f: f %>

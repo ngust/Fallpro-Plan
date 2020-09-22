@@ -27,6 +27,15 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'dotenv-rails'
+gem 'awesome_print', require: 'ap'
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'kaminari'
+gem 'pdfkit', require: 'pdfkit'
+gem "cocoon"
+gem "font-awesome-rails"
+gem 'mini_racer'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

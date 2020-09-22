@@ -1,0 +1,272 @@
+// Place all the styles related to the scores controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//WTS NEW
+.correct-wrapper {
+    margin: 25px 0;
+}
+
+//
+.non_header {
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.correct {
+	color: #387c33;
+	font-weight: bold;
+	font-size: 24px;
+    margin-left: 2px;	
+    margin-bottom: 500px;
+}
+.correct img {
+	margin-right: 5px;
+	margin-bottom: 2px;
+	height: 20px;
+}
+.incorrect {
+	color: #e42224;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 2px;
+    // margin-bottom: 50px;
+ }
+ .incorrect img {
+	margin-right: 5px;
+	margin-bottom: 2px;
+	height: 20px;
+}
+.score_questions {
+	overflow: hidden;
+}
+.score_questions input[type=checkbox], .score_questions  input[type=radio] {
+	    margin: 4px 15px 0;
+	    margin-top: 1px;
+	    line-height: normal;
+	    transform: scale(1.5);
+}
+
+.user-score {
+	float:left;
+}
+
+//// New Design
+
+.exam-take-title {
+    color: #0071ba;
+    font-size: 36px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+.exam-take-desc {
+	   color: #666666;
+         font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-style: Bold;
+}
+.exam-take-desc-inner {
+	   color: #666666;
+         font-size: 21px;
+    font-family: 'Lato', sans-serif;
+    font-style: Bold;
+    margin-left: 25px;
+}
+
+.exam-hr-take {
+    height: 1.5px;
+    color: #adadad;
+    background-color: #adadad;
+    border: none;
+    clear: both;
+    // margin: 25px -50px;
+}
+.exam-hr-take-header {
+    height: 1px;
+    color: #666666;
+    background-color: #666666;
+    border: none;
+    clear: both;
+    margin: 0 -50px;
+}
+
+
+.exam-take-question-wrapper {
+	clear: both;	
+	font-family: 'Lato', sans-serif;
+    // span {
+    //     margin: 40px 0;
+    //         line-height: 2.5;
+    // }
+	.exam-take-question-take-body {
+	 	color: #333333;
+     	font-size: 24px;
+         margin: 40px 0;
+            line-height: 2.5;
+        img {
+            max-width: 400px; 
+            margin: 0 auto;
+        }
+}
+
+
+	.exam-take-points {
+	  	color: #0071ba;
+     	font-size: 24px;
+    	font-weight: 900;
+    	float: right;
+	}
+	.exam-take-question_no {
+	  	color: #072e4f;
+     	font-size: 20px;
+    	font-weight: 900;
+		float: left;
+	}
+	.exam-take-score_questions {
+		overflow: hidden;
+	}
+	.exam-take-score_questions input[type=checkbox], .exam-take-score_questions  input[type=radio] {
+		    margin: 4px 15px 0;
+		    margin-top: 1px;
+		    line-height: normal;
+		    transform: scale(1.5);
+	}
+	.score_input {
+		float: left;
+		width: 5%;
+	}
+
+	.score_input_label {
+		float: left;
+		width: 80%;
+		    margin-left: 20px;
+		    color: #4d4d4d;
+		// font-size: 18px;
+		    font-size: 24px;
+		
+	}	
+
+}
+
+#exam-take-submit {
+    padding: 5px 40px;
+    font-size: 40px;
+ }
+
+
+ //// New Show Code
+
+ .your-score-wrapper {
+ 	width: 400px;
+ 	margin: 0 auto;
+ 	text-align: center;
+ 		font-family: 'Lato', sans-serif;
+ 		line-height: 55px;
+ 	.your-score-header {
+ 		color: #28a3ce;
+ 		font-size: 42px;
+ 		font-weight: 900;
+ 		text-transform: uppercase;
+ 	}
+ 	.your-score-percent {
+ 		color: #4d4d4d;
+ 		font-size: 100px;
+ 		font-weight: 900;
+
+ 	}
+ 	.your-score-out-of {
+ 		color: #666666;
+ 		font-size: 20px;
+ 	/*	font-weight: 900*/
+ 	}
+ }
+
+ /// New My Scores
+
+ .scores-search-wrapper {
+    width: 600px;
+    height: 40px;
+    margin: 25px auto;
+    clear: both;
+    text-align: center; 
+    position: relative;
+    img {
+        position: absolute;
+        bottom: 30px;
+        height: 110px;
+        right: 20px;
+    }
+    .exam-search-input {
+        width:400px;
+        float: left;    
+        height: 34px;
+    }
+    .exam-search {
+        margin-left: 16px;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: -4px;
+        float: left;
+        border-radius: 12px;
+    }
+}
+#user_scores_table_title {
+	width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+ .scores-search-wrapper {
+        width: 100%;
+        //margin: 25px auto;
+        img {
+            position: absolute;
+            bottom: 34px;
+            height: 100px;
+            right: 00px;
+        }
+        .exam-search-input {
+            width: 60%;
+            height: 28px;
+        }
+        .exam-search {
+            margin-left: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: -4px;
+            float: left;
+            border-radius: 12px;
+        }
+    }
+    #user_scores_table_title {
+	width: auto;
+}
+
+}
+@media screen and (max-width: 700px) {
+
+    .scores-search-wrapper {
+        width: 100%;
+        //margin: 25px auto;
+        img {
+            position: absolute;
+            bottom: 34px;
+            height: 100px;
+            right: -10px;
+        }
+        .exam-search-input {
+            width: 60%;
+            height: 28px;
+        }
+        .exam-search {
+            margin-left: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: -4px;
+            float: left;
+            border-radius: 12px;
+        }
+    }
+}
+

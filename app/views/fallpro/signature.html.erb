@@ -1,10 +1,11 @@
+
 <div class="container">
       <div class="onsite-header-wrapper">
                 <span class="onsite-header">Fall Pro Plan</span></br>
         <span class="onsite-header onsite-small">Section 9 - Signature</span>
       </div>
 
-<%=form_for [:fallpro, @fallpro] do |f| %>
+<%=form_for @fallpro do |f| %>
 
   <div >
     <%= render 'signatures_desk', f: f %>
@@ -12,7 +13,6 @@
 
 <%= f.submit "Save and Submit", name: "signature", class: "btn covid-button btn-lg btn-block ipad-button", id: 'signature_pad_save' %>
 <% end %>
-
 
 
 <script>

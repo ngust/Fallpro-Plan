@@ -27,7 +27,7 @@ class FallproSitesController < ApplicationController
 
 
 	 if @site.save
-	    redirect_to fallpro_fallpro_started_path(@site.fallpro), notice: "User Created successfully!"
+	    redirect_to fallpro_started_path(@site.fallpro), notice: "User Created successfully!"
 	  else
 	  logger.info "XXXXXX #{@site.errors.full_messages.to_sentence}"
     render :new, notice: "Fallpro plan could not be created!"
@@ -39,11 +39,11 @@ class FallproSitesController < ApplicationController
    		@site = FallproSite.find(params[:id])
       if @site.update_attributes(fallpro_site_params)
         if params[:roofedit]
-          redirect_to fallpro_fallpro_path(@site.fallpro, fallpro_id: @site.fallpro), notice: "Updated successfully!"
+          redirect_to fallpro_path(@site.fallpro, fallpro_id: @site.fallpro), notice: "Updated successfully!"
       	elsif params[:fallpro_site][:roof]
-      		redirect_to new_fallpro_fallpro_hazard_path(fallpro: @site.fallpro), notice: "Updated successfully!"
+      		redirect_to new_fallpro_hazard_path(fallpro: @site.fallpro), notice: "Updated successfully!"
       	else
-        	redirect_to fallpro_fallpro_index_path, notice: "Updated successfully!"
+        	redirect_to fallpro_index_path, notice: "Updated successfully!"
         end
 
       else

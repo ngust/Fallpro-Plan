@@ -1,0 +1,471 @@
+// Place all the styles related to the inspection_profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.rental-container {
+	margin-left: calc((100vw - 700px)/2);
+	margin-right: calc((100vw - 700px)/2);
+	overflow-x: hidden;
+}
+
+.rental_item {
+	// height: 350px;
+	width: 350px;
+	// width: auto;
+	// max-width: 700px;
+	float: left;
+	// margin: 15px;
+	padding: 10px;
+	border-radius: 15px;
+	overflow: hidden;
+
+	 h4 {
+			 font-family: 'raleway';
+			 //  font-weight: 600;
+			  font-size: 25px;
+			  // color: #5a6068;
+			  color: #000;
+		}
+}
+.rental_desc {
+	font-weight: 800;
+}
+.rental_item:hover {
+	opacity: 0.4;
+  text-shadow: 0 0 15px #f7882f;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 20px  #f7882f;
+    // border: 2px solid  #0e83cd;
+  }
+.rental_item_header a:link, .rental_item_header a:visited, .rental_item_header  a:hover {
+  text-decoration: none; color: white;
+}
+
+.rental_item_header  a:active, .rental_item_header  a:hover {
+  color: #f7882f;
+
+}
+.rental_item_header {
+ padding-left: 15px;
+ padding-left: 15px;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ border-radius: 15px;
+ background: #000;
+ color: #fff;
+ font-family: 'raleway';
+	font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+}
+.rental_item_pic {
+	margin-top: 15px;
+	height: 300px;
+	width: 100%;
+	// padding-left: 65px;
+	// padding-right: 65px;
+	vertical-align:middle; text-align:center;
+			position: relative;
+			overflow: hidden
+	
+}
+.rental_item_pic img{
+	height: 100%;
+	min-width: 100%;
+	// 	max-width:100%;
+	// max-height:100%;
+	object-fit: scale-down;
+	position: absolute;
+   	left: 50%;
+   	top: 50%;
+   	-webkit-transform: translateY(-50%) translateX(-50%);
+}
+//////////////////////  Rental Screen New ////////////////
+//////////////////  SETS OLD /////////////////
+// .container_sets {
+// 	padding-left:calc(50vw - 440px);
+// 	padding-right:calc(50vw - 440px);
+// }
+// .set_img {
+// 	position: relative;
+// 	// height: 300px;
+// 	width: 400px;
+// 	float: left;
+// 	margin: 20px;
+// 	 // text-shadow:  0px 0px 8px #001572;
+// }
+
+// .set_img:hover {
+// 	opacity: 0.4;
+// 	background: rgba(112, 245, 132, 0.90);
+// 	transition: all ease 0.5s;
+// 	}
+// .set_img img{
+// 	width: 100%;
+// 	border: 5px solid black;
+// }
+
+// .set-header {
+// 	width: 100%;
+//   position: absolute;
+//   top: 50px;
+//   text-align: center;
+//   font-family: 'raleway';
+// 	font-weight: 500;
+//   font-size: 55px;
+//   padding: 0 5px;
+//   color: #fff;
+//   text-shadow:  0px 0px 8px #001572;
+//   text-shadow:
+//     -1px -1px 0 #001572,
+//     1px -1px 0 #001572,
+//     -1px 1px 0 #001572,
+//     1px 1px 0 #001572;  
+// }
+// .set-header a{
+// 	font-weight: 900;
+// 	text-decoration: none;
+// 	// color: #fff;
+// }
+// .set-header a:hover{
+// text-decoration: none;
+// 	// color: #fff;
+// }
+//////////////////  SETS OLD /////////////////
+//////////////////  SETS NEW/////////////////
+.rental_list_item {
+	height: 100px;
+	width: 100%;
+	overflow: hidden;
+
+}
+.rental_list_item:hover {
+	    // color: #28b62c;
+    text-shadow: 0 0 15px #f7882f;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 15px  #f7882f;
+    border: 2px solid  #f7882f;
+
+}
+.rental_list_image_holder {
+	height: 100%;
+	width: 100px;
+	float: left;
+}
+.rental_list_image_holder img {
+	height: 90%;
+}
+.rental_list_header {
+	padding: 20px;
+
+	float: left;
+	margin-left: 50px;
+	font-family: 'raleway';
+	font-weight: 600;
+  	font-size: 40px;
+  	color: #6b7a8f;
+  	text-shadow:  0px 0px 2px #f7c331;
+  	text-decoration: none;
+}
+
+.rental-tabs {
+        padding: 10px 25px;
+        cursor: pointer;
+        // border-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        // -webkit-border-radius: 10px;
+        // -moz-border-radius: 10px;
+        color: #000 !important;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 400;
+        font-family: 'raleway';
+	    margin: 0 10px;
+	    text-transform: uppercase;
+	    letter-spacing: 1px;
+	    -webkit-transition: all 0.5s;
+	    -moz-transition: all 0.5s;
+	    transition: all 0.5s;
+	    float: left;
+	    background-color: #e6ccff !important;
+}
+
+.rental-tabs:hover {
+
+       box-shadow: 0 0 30px  #6b7a8f;
+       text-decoration: none !important;
+        // background-color: #6b7a8f  !important;
+         transition: all 0.5s ease;
+}
+
+.rental_bg {
+	background: #e6ccff;
+}
+#purchased-tab {
+	background-color: #b3d1ff !important;
+}
+.purchased_bg {
+	background: #b3d1ff;
+}
+
+
+@media screen and (max-width: 1100px) {
+	.rental_list_header {
+		font-size: 25px;
+		padding: 12px;
+		width: calc(100% - 100px);
+  	overflow-wrap: break-word;
+	  word-wrap: break-word;
+
+	  -ms-word-break: break-all;
+	  /* This is the dangerous one in WebKit, as it breaks things wherever */
+	  word-break: break-all;
+	  /* Instead use this non-standard one: */
+	  word-break: break-word;
+
+	  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+	  -ms-hyphens: auto;
+	  -moz-hyphens: auto;
+	  -webkit-hyphens: auto;
+	  hyphens: auto;
+	}
+	.rental_list_item {
+		height: 50px;
+	}
+	.rental_list_image_holder {
+		width: 50px;
+	}
+}
+@media screen and (max-width: 1100px) {
+	.rental_list_header {
+		font-size: 20px;
+	}
+	.rental_list_item {
+		height: 50px;
+	}
+	.rental_list_image_holder {
+		width: 50px;
+	}
+}
+//////////////////  SETS NEW/////////////////
+
+// @media screen and (max-width: 900px) {
+// 	.container_sets {
+// 		padding-left:calc(50vw - 220px);
+// 		padding-right:calc(50vw - 220px);
+// 	}
+// }
+
+// @media screen and (max-width: 500px) {
+// .rental_img {
+// 	position: relative;
+// 	max-height: 200px;
+// 	height: 80vw;
+// 	max-width: 200px;
+// 	width: 80vw;
+
+// 	float: none;
+// 	margin: 15px auto;
+// }
+
+
+// }
+
+//////////////////  HEADER  /////////////////
+
+
+.rental_breadcrumb_active {
+	color: #000;
+
+	// text-shadow: 0 0 30px #f7882f;
+	// transition: all 0.5s ease;
+	text-shadow: 1px 1px 0 #fff,
+			    -1px 1px 0 #fff,
+			    1px -1px 0 #fff,
+			    -1px -1px 0 #fff,
+			    0px 1px 0 #fff,
+			    0px -1px 0 #fff,
+			    -1px 0px 0 #fff,
+			    1px 0px 0 #fff,
+			    2px 2px 0 #f7882f,
+			    -2px 2px 0 #f7882f,
+			    2px -2px 0 #f7882f,
+			    -2px -2px 0 #f7882f,
+			    0px 2px 0 #f7882f,
+			    0px -2px 0 #f7882f,
+			    -2px 0px 0 #f7882f,
+			    2px 0px 0 #f7882f,
+			    1px 2px 0 #f7882f,
+			    -1px 2px 0 #f7882f,
+			    1px -2px 0 #f7882f,
+			    -1px -2px 0 #f7882f,
+			    2px 1px 0 #f7882f,
+			    -2px 1px 0 #f7882f,
+			    2px -1px 0 #f7882f,
+			    -2px -1px 0 #f7882f,
+			    0 0 30px #f7882f;
+}
+
+.rental_breadcrumb_active::before {
+		 	color: #fff;
+		 	text-shadow: none,
+		 }
+
+.dash_breadcrumb a:link, .dash_breadcrumb a:visited, .dash_breadcrumb  a:hover {
+  text-decoration: none; color: white !important;
+}
+
+.dash_breadcrumb  a:active, .dash_breadcrumb  a:hover {
+  color: #f7882f !important;
+  text-decoration: none !important;
+}
+
+
+//////////////////  HEADER  /////////////////
+
+//////////////////  SHOW PAGE  /////////////////
+
+.rental_show_header {
+ padding-left: 15px;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ border-radius: 15px;
+ // background: #000;
+ // color: #fff;
+ font-family: 'raleway';
+  font-weight: 600;
+  font-size: 55px;
+  text-align: center;
+
+}
+.rental_img {
+	height: 350px;
+	width: 350px;
+	float: left;
+	margin: 20px;
+	 text-shadow:  0px 0px 5px #fff;
+}
+
+.rental_img:hover {
+	opacity: 0.4;
+	background: rgba(112, 245, 132, 0.90);
+	transition: all ease 0.5s;
+	}
+.rental_img img{
+	width: 100%;
+	// border: 5px solid black;
+}
+.rental_show_under_header {
+	  margin-top: 30px;
+}
+.rental_text {
+	 margin-top: 80px;
+	 font-family: 'raleway';
+	  font-weight: 600;
+	  font-size: 30px;
+	  width: 700px;
+
+	  h4 {
+			 font-family: 'raleway';
+			  font-weight: 600;
+			  font-size: 30px;
+		}
+}
+// .rental_text h4 {
+// 	 font-family: 'raleway';
+// 	  font-weight: 600;
+// 	  font-size: 30px;
+// }
+.rental_thin {
+	font-weight: 200;
+}
+	#rental-button {
+    // height: 60px;
+    // width: 75%;
+    // margin: 15px auto;
+    margin: 10px 0; 
+    font-family: raleway;
+    // font-weight: 00  !important;
+    // font-size: 25px  !important;
+    vertical-align: middle;
+     // line-height: 75px;
+}
+
+@media screen and (max-width: 850px) {
+	.rental_show_header {
+	  font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.rental_show_header {
+	  font-size: 30px;
+	}
+	.rental_text {
+	  font-size: 20px;
+	}
+	.rental_text h4 {
+	  font-size: 20px;
+	}
+	#rental-button {
+    height: auto;
+    width: 75%;
+    margin: 15px auto;
+    margin-right: calc(25%/2);
+    margin-left: calc(25%/2);
+    // margin: 10px 0 !important; 
+    font-family: raleway;
+    font-size: 20px  !important;
+    vertical-align: middle;
+     // line-height: 75px;
+}
+
+#rental-button:hover{
+    // color: #28b62c;
+    // text-shadow: 0 0 15px #28b62c;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 25px  #70f584;
+    border: 2px solid  #fff;
+}
+}
+//////////////////  SHOW PAGE  /////////////////
+
+.ins-steps {
+	// margin-left: 25px;
+}
+
+// .ins-toggle {
+// 	float: right;
+// }
+.toggle.btn {
+	float: right;
+	margin-right: 25px;
+}
+.toggle-handle  {
+	border: 2px blue;
+}
+.inspect-step-row {
+	clear: both;
+	padding: 15px 0;
+	padding-left: 25px;
+}
+.inspect-step-words {
+	width: 80%;
+	float: left;
+}
+.formal-dates {
+	display:none;
+	margin-left: 25px;
+}
+.inspection-pro-table th {
+    font-family: 'raleway';
+    font-weight: 600;
+    font-size: 25px;
+    }
+
+
+    @media (min-width: 1200px) {
+	#inspections_container {
+    	max-width: 1200px;
+	}
+}

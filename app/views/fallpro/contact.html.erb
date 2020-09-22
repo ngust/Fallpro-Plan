@@ -4,7 +4,7 @@
         <span class="onsite-header onsite-small">Section 8 - Contact Information</span>
       </div>
 
-<%=form_for [:fallpro, @fallpro] do |f| %>
+<%=form_for @fallpro do |f| %>
 
   <div >
     <%= render 'contact_desk', f: f %>

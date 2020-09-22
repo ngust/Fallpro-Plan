@@ -1,0 +1,171 @@
+// Place all the styles related to the courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#qr_button {
+	margin-left: 15px;
+	margin-top: 0;
+	font-size: 10px;
+}
+
+.onsite-forms label{
+	font-family: raleway;
+	font-size: 25px;
+}
+
+.onsite-forms {
+	//height: 54px !important;
+	font-size: 25px !important;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	// text-align: center;
+}
+
+.onsite-forms input[type=file] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-upload {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    color: #f1e5e6;
+    background-color: #337ab7;
+    cursor: pointer;
+}
+.onsite-label-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+.ipad-button {
+	margin-top: 25px;
+	font-family: raleway;
+	font-weight: 800  !important;
+	font-size: 35px  !important;
+    @media screen and (max-width: 700px) {
+        font-size: 16px  !important;
+    }
+}
+svg {
+  fill: currentColor;
+}
+
+.onsite-header {
+	font-family: raleway;
+	font-weight: 400  !important;
+	font-size: 40px  !important;
+}
+.onsite-small{
+	font-size: 25px  !important;
+}
+.onsite-header-wrapper {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align: center;
+}
+
+.onsite-confirm {
+	display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: raleway;
+    font-size: 25px;
+}
+
+.confirm-db {
+	font-weight: 400;
+	margin-left: 35px;
+    text-transform: capitalize;
+}
+
+#course_logo {
+	max-width: 250px;
+	height:  250px;
+}
+
+.auth-image-login{
+  // height: 500px;
+  height:  calc(100vh);
+  width: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),image-url("safety_bg.jpeg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  
+    @media screen and (max-width: 700px) {
+      height: auto;
+      padding-bottom: 100px;
+    }
+}
+
+#observations-meeting-bg {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),image-url("meeting.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#confirm-button {
+    height: 75px;
+    width: 95%;
+    margin: 0 auto;
+    font-family: raleway;
+    font-weight: 800  !important;
+    font-size: 35px  !important;
+    vertical-align: middle;
+     // line-height: 75px;
+         @media screen and (max-width: 700px) {
+            margin: 15px auto;
+            height: auto;
+        }
+}
+
+.confirm-buttons {
+    margin-top: calc((100vh / 2) - 300px);
+}
+
+#confirm-button:hover{
+    // color: #28b62c;
+    // text-shadow: 0 0 15px #28b62c;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 25px  #70f584;
+    border: 2px solid  #fff;
+}
+.course_header_text {
+    text-align: center;
+        padding-top: 200px;
+    
+}
+.course_header_text span {
+    font-family: raleway;
+    font-weight: 800  !important;
+    font-size: 50px  !important;
+    color: #fff;
+}
+.add_workers_table {
+    height: 400px;
+    overflow-Y: scroll;
+}
+
+.onsite-toc {
+    line-height: 20px;
+    input {
+            width: 25px;
+    height: 25px;
+    }
+}

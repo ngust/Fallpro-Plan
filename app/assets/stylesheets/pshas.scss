@@ -1,0 +1,87 @@
+// Place all the styles related to the pshas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.psha-step-header {
+	padding-left: 100px !important;
+}
+
+.pdf-green {
+	    background-color: #70f5845e;
+	    color: black;
+}
+
+.psha-haz-con-header {
+	// padding-left: 100px !important;
+	text-align: right;
+	;
+	span {
+		color: blue;
+		padding-right: 50px;
+	}
+	
+}
+.psha-control-row {
+	td:first-child {
+		// border-right: 0px  !important;
+	}
+	td:nth-child(2) {
+		border-left: 0px  !important;
+	}
+}
+
+.psha-haz-header {
+		span {
+		color: red;
+	}
+	
+}
+
+.psha-risk-level {
+	// background: #2ECC40;
+    font-weight: bold;
+    padding: 3px 8px;	
+}
+
+.table-split {
+	padding: 0 !important;
+	table {
+		border: none;
+		width: 100%;
+		// border: 0px solid  !important;
+		// td {
+		// 	    border: 1px solid;
+		// }
+		td {
+			width: 50%;
+		}
+		tr:first-child td:first-child {
+		    border-top: 0px  !important;
+		    border-bottom: 0px  !important;
+		    border-left: 0px  !important;	    
+		}
+		tr:first-child td:last-child {
+			// border-left: 1px  solid !important;	
+			border-top: 0px  !important;
+			border-right: 0px  !important;
+			border-bottom: 0px  !important;
+		}
+	}
+}
+
+
+.psha_complete_header {
+	text-align: center;
+	display: inline-block;
+	span {
+		color: red;
+		font-weight: 700;
+		font-size: 22px;
+	}
+}
+
+.psha-rem {
+    float: right;
+    margin: 0 15px !important;
+}

@@ -1,0 +1,86 @@
+// Place all the styles related to the ohs_plans controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.ohs-toggle {
+	.toggle-handle  {
+		border: 2px blue;
+	}
+	.toggle.btn {
+		float: left;
+		// margin-right: 25px;
+	}
+
+}
+
+.ohs-confirm {
+	color: #fff;
+	padding-left: 90px !important;
+	     @media screen and (max-width: 700px) {
+            padding-left: 20px !important;
+        }
+}
+
+#ohs-header {
+	padding: 100px 0 50px 0;
+	color: #fff;
+	p {
+		font-size: 28px;
+	}
+}
+
+.ohs-cat-headers {
+	padding-left: 65px !important;
+}
+
+.ohs-header-image {
+	height: 100px;
+	text-align: left;
+	padding: 10px 0;
+	overflow: hidden;
+	img {
+		height: 100%;
+	}
+} 
+#ohs_plan_table {
+	th, td{
+		font-size: 16px !important;
+	}
+}
+.ohs-table {
+	// border: 1px solid #000;
+	border-collapse: collapse;
+	width: 100%;
+	th, td {
+		padding: 5px 10px;
+		border: 1px solid #000;
+		font-size: 16px;
+	}
+
+}
+.ohs-table-header {
+	td {
+		text-align: center;
+		font-size: 16px;
+	}
+	
+}
+
+.ohs-header{
+	font-weight: 800;
+	text-align: center;
+} 
+
+.ohs-doc-body {
+	h1{
+		font-size: 24px;
+		font-weight: 600;
+	}
+	h3{
+		font-size: 20px;
+		font-weight: 600;
+	}
+}

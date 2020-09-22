@@ -1,0 +1,73 @@
+// Place all the styles related to the sites controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.site_logo {
+	height: 300px;
+	width: 300px;
+	overflow: hidden;
+	position: relative;
+	align-self: center;
+	margin: 0 auto;
+	// border:15px solid #007bff;
+	// border-radius: 50%;
+}
+.site_logo img{
+	margin-right: 15%;
+	height: 100%;
+	position: absolute;
+    margin: auto; 
+    min-width: 100%;
+
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+}
+.site_logo:hover {
+  // -webkit-transform: rotate(360deg);
+  //         transform: rotate(360deg);
+   opacity: 0.7;
+   -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+	}
+.site-header-logo {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+
+}
+.site-chart-wrapper{
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	@media screen and (max-width: 700px) {
+		width: 100%;
+	}
+	h3 {
+		margin: 0 auto;
+	}
+}
+.site_logo {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 15px;
+    img {
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    min-width: 100%;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    z-index: 0;
+    }
+ }
+.site-header td {
+    font-size: 20px;
+    font-weight: bold;    
+}

@@ -1,0 +1,47 @@
+ <%= form_for @site do |f| %>
+      <% if @site.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
+
+          <ul>
+          <% @site.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+          <div class="form-group onsite-forms">
+            <div  id="user-fields">
+                  Specifically where are you working
+              </div>
+               <div>
+                <%= f.label :height, "How high?" %><br>
+                <%= f.number_field :height, required: true, class: 'exam_forms', style: "width: 140px;" %><%= f.select :units, [ 'feet', "meters"], {}, required: true, class: ' exam_forms', id: "feet-meters" %><br />
+              </div>
+              On a sloped surface?
+                 <div class="super-buttons">
+
+                <%= link_to "Yes", "#", class: "btn btn-primary exam_button", id: "yes-cons"  %>
+                <%= link_to "No", "#", class: "btn btn-primary exam_button", id: "no-cons" %>
+                </div>
+                <div style="display: none; width: 300px" id="slope-type">
+                   <%= f.label :slope, "What is the roof slope?" %><br>
+                  <%= f.select :slope, [ 'No slope under 4/12', "Low slope under 8/12", "Steep slope over 8/12"], {}, class: 'exam_forms form-control' %><br />
+                </div>
+                <div>
+                   <%= f.label :worktype, "What type of work are you doing?" %><br>
+                  <%= f.select :worktype, [ 'Formwork', "Roofing", "Scaffold erection", "Painting", "Drywall", "Steel stud install", "Wood framing", "Truss install", "Maintenance of building", "User defined"], {}, required: true, class: 'exam_forms form-control' %><br />
+                </div>
+                
+
+ 
+              <%= f.hidden_field :roof, value: true  %>
+
+<div style="height:50px"></div>
+
+            <div>
+              <%= f.submit "Save", name: "roofedit", class: 'btn btn-success btn-lg btn-block ipad-button ' %> 
+            </div>
+        </div>
+      <% end %>

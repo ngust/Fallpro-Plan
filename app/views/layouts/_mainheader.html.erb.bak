@@ -1,0 +1,71 @@
+<div id="main-header">
+	<div class="header-container">
+		
+		<% if current_user
+				worker = Worker.where(user_id: current_user.id).first
+				employer = Employer.where(id: current_user.employer_id).first
+              if current_user.user_type == "Employer" && employer
+                logo_link = employer_path(employer)
+              elsif current_user.user_type == "Worker" && worker
+                logo_link = worker_path(worker)
+               end 
+            else  
+              logo_link = "/"
+             end %>
+
+		<%= link_to (print_image ('logo-compressor.png')), "http://wethesafe.com" %>
+		<ul> 
+			<% unless current_user && current_user.user_type == "Admin" %>
+				<li> 
+					<%= link_to "Home", logo_link %>
+				</li> 
+				<li> 
+					<a href="http://wethesafe.com">Main Site</a> 
+				</li>  
+			
+
+				<% if current_user %>
+					<li><%= link_to 'Edit login', edit_user_registration_path %></li> 
+				<% end %>
+			<% end %> 
+
+			<% if current_user && current_user.user_type == "Employer" && Employer.where(id: current_user.employer_id).first%>
+				<li><%= link_to 'Dashboard', employer_path(current_user.employer_id) %></li> 
+				<li><%= link_to 'Edit profile', edit_employer_path(current_user.employer_id) %></li> 
+				<li><%= link_to 'My Workers', employer_my_workers_path(current_user.employer_id) %></li> 
+				<li><%= link_to 'My Sites', employer_my_sites_path(current_user.employer_id) %></li> 
+
+			<% elsif current_user && current_user.user_type == "Admin" %>
+				<li><%= link_to 'Dashboard', admin_root_path %></li> 
+				<li><%= link_to 'Users', admin_users_path %></li> 
+				<li><%= link_to 'Workers', admin_workers_path %></li>
+				<li><%= link_to 'Employers', admin_employers_path %></li>
+				<li><%= link_to 'Sites', admin_sites_path %></li>
+				<li><%= link_to 'Roles', roles_path %></li>
+
+
+			    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Forms
+                      </a>
+                   
+                        <ul class="dropdown-menu">
+	                        <li><%= link_to 'All Forms', paperworks_path, class: "dropdown-item" %></li>
+	                        <li><%= link_to 'SJP', sjps_paperworks_path, class: "dropdown-item" %></li>
+	                        <li><%= link_to 'SWP', swps_paperworks_path, class: "dropdown-item" %></li>
+	                        <li><%= link_to 'Certificates', certs_paperworks_path, class: "dropdown-item" %></li>
+                      </ul>
+ 
+               
+                    </li>
+
+			<% elsif current_user && current_user.user_type == "Worker" && worker %>
+				<li><%= link_to 'Edit profile', edit_worker_path(worker) %></li> 
+			<% end %>
+			</ul> 
+
+
+
+
+	</div>
+</div>

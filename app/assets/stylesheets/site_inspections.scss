@@ -1,0 +1,298 @@
+// Place all the styles related to the site_inspections controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.inspection-header-table {
+	width: 100%;
+    color: #000;
+    font-family: "raleway";
+    span {
+        font-size: 16px;
+        color: #000;
+        font-weight: 400;
+    }
+}
+
+#site-ins-overview {
+    td {
+        // width: calc( 100% / 6) !important;
+        width: 180px !important;
+    }
+    .pdf-light-gray {
+        padding: 0.25rem !important;
+    }
+}
+
+#site_inspection_review {
+    td {
+        width: calc( 100% / 6) !important;
+    }
+    td:first-child {
+        width: calc( 100% / 12) !important;
+    }
+}
+
+#site_inspection_observations {
+    td:nth-child(2) {
+        width: calc( 100% / 12) !important;
+    }
+}
+
+
+.site-inspection-top-header {
+	width: 200px;
+	float: right;
+	padding: 5px 10px ;
+	border: 1px solid;
+}
+#site-inspection-top-header-span {
+	font-size: 38px;
+    margin-left: 30px;
+    float: left;
+} 
+	
+.table-floating > td {
+	padding: 15px 0;
+	padding-left: 100px;
+}
+.td-link {
+	padding: 0 !important;
+		position: relative;
+        text-align: center;
+}
+.td-link-inner {
+	position: relative;
+}
+.td-link a{
+	width: auto;
+	height: auto;
+ 	display: block;
+ 	padding: 0.75rem;
+ 	  position: absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+   color: black;
+   text-decoration: none;
+}
+
+.td-link a:hover {
+	border: 2px dashed #999999;
+	 	background: #e0f9ff;
+        text-decoration: none !important;
+        color: #000;
+        .td-link-no-data {
+            background: none;
+            border: none;
+        }
+}
+.td-link-no-data {
+        border: 2px dashed #999999;
+        background: #e0f9ff;
+        text-align: center;
+}
+
+#signature-table {
+	border: none;
+	    font-family: 'raleway';
+    font-size: 20px;
+	td, tr {
+		border: none;
+		border-top: none;
+	}
+}
+
+.site-inspection-bottom {
+		    font-family: 'raleway';
+    font-size: 20px;
+}
+
+#background{
+    position:absolute;
+    z-index:-1;
+    // background:white;
+    // display:block;
+    // margin-top: 250px;
+    min-height:100%; 
+    min-width:100%;
+    color:yellow;
+    text-align: center;
+    p {
+    	margin: 200px auto;
+    }
+}
+
+#bg-text
+{
+    color:lightgrey;
+    font-size:300px;
+    transform:rotate(320deg);
+    -webkit-transform:rotate(320deg);
+     // opacity: 0.6;
+}
+
+.site-ins-pdf {
+     background-repeat: repeat;
+	background-image: url("https://qrsafety.com/public/assets/draft.png");
+    background-size: contain;
+}
+
+.site-document-table {
+	table-layout: fixed;
+}
+
+.obs-image-wrapper {
+    width: 100%;
+    // padding: 15px;
+    img {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+.site-sig-wrapper {
+    width: 100%;
+    height: 200px;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+#site_inspection_overview {
+
+}
+#site_inspection_overview_mobile{
+    display: none;
+}
+#site_inspection_formal_sections {
+
+}
+#site_inspection_formal_sections_mobile {
+  display: none;
+}
+.site-inspection-top-header-mobile {
+    display: none;
+}
+
+.score-ref {
+    text-align: center;
+    .score-title {
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+    .score-item {
+        margin: 0 15px;
+        white-space: nowrap !important;
+    }
+}
+#site-select {
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+   .text-nowrap {
+        white-space: normal !important;
+    }
+    .tbt-responsive {
+        overflow: scroll;
+        width: 100%;
+        table {
+            width: 98%;
+            margin: 0 auto;
+        }
+    }
+      .score-ref {
+        text-align: left;
+            .score-item {
+            margin: 0 0px;
+            white-space: normal !important;
+            display: block;
+            span {
+                white-space: nowrap !important;
+            }
+        }
+    }
+    .site-inspection-top-header {
+        display: none;
+    }
+    .site-inspection-top-header-mobile {
+        display: inline-block;
+        width: 360px;
+        padding: 5px 10px;
+        border: 1px solid;
+        margin-top: 0px;
+        margin-left: 33px;
+        td {
+                width: 50%;
+
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    #background{
+        position:absolute;
+        z-index:-1;
+        min-height:100%; 
+        width:50vw;
+        color:yellow;
+        text-align: center;
+        overflow: hidden;
+        p {
+            margin: 200px auto;
+        }
+    }
+   
+    #site_inspection_overview {
+        display: none;
+    }
+    #site_inspection_overview_mobile{
+        display: table;
+    }
+    #site_inspection_formal_sections {
+        display: none;
+    }
+    #site_inspection_formal_sections_mobile {
+      display: table;
+    }
+    .toolbox_pdf_table  {
+        font-size: 14px !important;
+    }
+    .toolbox_pdf_header span {
+        font-size: 18px !important;
+    }
+    .site-inspection-top-header-mobile {
+        display: inline-block;
+        width: 100%;
+        padding: 5px 10px;
+        border: 1px solid;
+        margin-top: 0px;
+        margin: 0 auto;
+        td {
+                width: 50%;
+                white-space: nowrap !important;
+                font-size: 11px;
+        }
+    }
+    #site-inspection-top-header-span {
+        font-size: 30px;
+        float: none;
+        margin: 0 auto;
+    }
+    .cert_top_header p {
+        font-size: 14px;
+    }
+    .cert_header_left, .cert_header_right {
+        float: none;
+    }
+    .tbt_btn {
+        width: 400px !important;
+        float: none !important;
+        margin: 5px auto !important;
+        display: block !important;
+        font-size: 16px !important;
+    }
+}

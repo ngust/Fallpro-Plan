@@ -1,0 +1,57 @@
+// Place all the styles related to the task_hazards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ui-slider-handle {
+	// padding: 0 3px;
+ //    text-align: center;	
+ //    height: 2.2em !important;
+ //    top: -10px !important;
+ //        padding-top: 5px;
+}
+.slider-wrapper, .prob-wrapper {
+	width: 100%;
+	    margin: 50px auto;
+}
+.slider {
+	margin: 25px 0 0 0;
+}
+
+.ng-handle {
+    width: 3em !important;
+    height: 1.6em !important;
+    top: 50% !important;
+    margin-top: -.8em !important;
+    text-align: center !important;
+    line-height: 1.6em !important;
+  }
+
+    .slider-steps {
+	    // border: 1px solid transparent; /*follows #slider2 style for sizing purposes */
+	    // width: 800px; 
+	    position: relative; 
+	    height: 30px;
+	    display: flex;
+	    flex-wrap: wrap;
+	    span {
+	    	// display:inline-block;
+	    	// width: 15%;
+	    	// text-align:center;
+	    	// margin-right: 15%;
+	    	flex: 1 0 25%;
+	    	text-align: center;
+	    	// background: pink;
+	    	// border: 1px red solid;
+	    	font-size: 16px;
+		    font-weight: 900;
+		    padding-left: 27px;
+			}
+    }
+    .tick { 
+        border: 1px solid transparent; /*follows slide handle style for sizing purposes*/
+        position: absolute;
+        width: 1.2em;
+        margin-left: -.6em;
+        text-align:center;
+        left: 0;
+    }

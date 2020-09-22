@@ -1,0 +1,142 @@
+<div class="container">
+
+<%= form_for [:fallpro, @hazard] do |f| %>
+          <div class="form-group onsite-forms">
+            <div  id="user-fields">
+                  What is the distance to the lower surface?
+              </div>
+               <div>
+                <%= f.number_field :height, required: true, class: 'exam_forms', style: "width: 140px;" %><%= f.select :units, [ 'feet', "meters"], {}, required: true, class: ' exam_forms', id: "feet-meters" %><br />
+              </div><br />
+              What type of surface are you working on?
+                <div>
+                  <%= f.select :surface, [ 'Balcony', "Slab", "Work Platform", "Roof", "Deck"], {}, required: true, class: 'exam_forms form-control' %><br />
+                </div>
+                <div class="row">
+                  <div class="container">
+                Is there a chance that you could drop something and and hit someone or something below?
+                     <div>
+
+                    <%= link_to "Yes", "#", class: "btn btn-primary exam_button", id: "yes-can-drop"  %>
+                    <%= link_to "No", "#", class: "btn btn-primary exam_button", id: "no-can-drop" %>
+                    </div>
+                    <div style="display: none; width: 300px" id="slope-type">
+                       <%= f.label :drop_strike, "What could dropped objects strike?" %><br>
+                      <%= f.select :drop_strike, [ 'Public', "Fellow Workers", "Workers and Public"], {}, class: 'exam_forms form-control' %><br />
+                    </div>
+                    
+                  <%= f.hidden_field :can_drop, value: false  %>
+                  <div class="form-group onsite-forms">
+              </div>
+            </div>
+              <hr>
+          <div class="container">
+            <div class="row">
+              
+              
+            <p>Are there any power lines close to your work area? <p>
+
+               <div>
+
+                <%= link_to "Yes", "#", class: "btn btn-primary exam_button", id: "yes-power"  %>
+                <%= link_to "No", "#", class: "btn btn-primary exam_button", id: "no-power" %>
+                </div>
+                <p style="display: none" id="power_warning" class="bg-warning">Additional procedures and controls will be required, see local regulations and supervisor for direction before you do the work.</p>
+              </p>
+            </div>
+            </div>
+            <div class="container">
+            <p>Consider the materials and tools you are using.  Could they accidently get close to the power lines (limits of approach) </p>
+                
+               <!--  <div style="display: none; width: 300px" id="slope-type">
+                   <%= f.label :drop_strike, "What could dropped objects strike?" %><br>
+                  <%= f.select :drop_strike, [ 'Public', "Fellow Workers", "Workers and Public"], {}, class: 'exam_forms form-control' %><br />
+                </div> -->
+                
+                
+
+                <p>Are there any floor openings, shafts, holes that you will be working around?</p>
+              
+                  <div  style="margin: 0 auto;">
+                  <%= link_to "Yes", "#", class: "btn btn-primary exam_button", id: "yes-holes"  %>
+                  <%= link_to "No", "#", class: "btn btn-primary exam_button", id: "no-holes" %>
+                </div>
+                  <div style="display: none; width: 300px" id="hole-control-picker">
+                   <%= f.label :hole_control, "How will you control them?" %><br>
+                  <%= f.select :hole_control, [ 'Cover them with cover of adequate strength', "Put guardrails around them", "Other – user defined"], {}, class: 'exam_forms form-control' %><br />
+                </div>
+
+
+              <%= f.hidden_field :power_lines, value: false  %>
+              <%= f.hidden_field :holes, value: false  %>
+
+<div style="height:50px"></div>
+
+            <div>
+              <%= f.submit "Save", name: "hazardedit", class: 'btn btn-success btn-lg btn-block ipad-button ' %> 
+            </div>
+        </div>
+      <% end %>
+
+</div>
+
+  <script>
+  $( function() {
+    $('#yes-can-drop').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#no-can-drop').removeClass('super-button-clicked')
+      $('#slope-type').show()
+      $('#fallpro_hazard_can_drop').val(true)
+      });
+
+    $('#no-can-drop').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#yes-can-drop').removeClass('super-button-clicked')
+      $('#slope-type').hide()
+      $('#fallpro_hazard_can_drop').val(false)
+      });
+  });
+</script>
+  <script>
+  $( function() {
+    $('#yes-power').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#no-power').removeClass('super-button-clicked')
+      $('#power_warning').show()
+      $('#fallpro_hazard_power_lines').val(true)
+      });
+
+    $('#no-power').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#yes-power').removeClass('super-button-clicked')
+      $('#power_warning').hide()
+      $('#fallpro_hazard_power_lines').val(false)
+      });
+
+    $('#yes-holes').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#no-holes').removeClass('super-button-clicked')
+      $('#hole-control-picker').show()
+      $('#fallpro_hazard_holes').val(true)
+      });
+
+    $('#no-holes').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#yes-holes').removeClass('super-button-clicked')
+      $('#hole-control-picker').hide()
+      $('#fallpro_hazard_holes').val(false)
+      });
+  });
+</script>

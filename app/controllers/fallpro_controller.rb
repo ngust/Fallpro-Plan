@@ -96,7 +96,7 @@ class FallproController < ApplicationController
     end
     
      if @fallpro.save
-        redirect_to new_fallpro_fallpro_site_path(fallpro: @fallpro.id), notice: "Fallpro plan created successfully!"
+        redirect_to new_fallpro_site_path(fallpro: @fallpro.id), notice: "Fallpro plan created successfully!"
       else
         logger.info @fallpro.errors.full_messages.to_sentence
         render :new, notice: "Fallpro plan could not be created!"
@@ -108,50 +108,50 @@ class FallproController < ApplicationController
 
       if params[:systems] && @fallpro.update_attributes(fallpro_params)
         logger.info "systems triggered ...."
-        redirect_to fallpro_fallpro_items_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_items_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:items] && @fallpro.update_attributes(fallpro_params)
         logger.info "items triggered ...."
-        redirect_to fallpro_fallpro_setup_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_setup_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:setup] && @fallpro.update_attributes(fallpro_params)
         logger.info "setup triggered ...."
-        redirect_to fallpro_fallpro_pre_use_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_pre_use_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:pre_use] && @fallpro.update_attributes(fallpro_params)
         logger.info "setup triggered ...."
-        redirect_to fallpro_fallpro_rescue_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_rescue_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:rescue] && @fallpro.update_attributes(fallpro_params)
         logger.info "rescue triggered ...."
-        redirect_to fallpro_fallpro_contact_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_contact_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:contact] && @fallpro.update_attributes(fallpro_params)
         logger.info "contact triggered ...."
-        redirect_to fallpro_fallpro_signature_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_signature_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:signature] && @fallpro.update_attributes(fallpro_params)
         logger.info "signature triggered ...."
-        redirect_to fallpro_fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       ## edits
       elsif params[:systemsedit]  && @fallpro.update_attributes(fallpro_params)
-        redirect_to fallpro_fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:itemsedit]  && @fallpro.update_attributes(fallpro_params)
-        redirect_to fallpro_fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:setupedit]  && @fallpro.update_attributes(fallpro_params)
-        redirect_to fallpro_fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:inspectionedit]  && @fallpro.update_attributes(fallpro_params)
-        redirect_to fallpro_fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:rescueedit]  && @fallpro.update_attributes(fallpro_params)
-        redirect_to fallpro_fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:contactedit]  && @fallpro.update_attributes(fallpro_params)
-        redirect_to fallpro_fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
+        redirect_to fallpro_path(fallpro_id: @fallpro.id), notice: "Updated successfully!"
       elsif params[:emails]  && @fallpro.update_attributes(fallpro_params)
         emails = @fallpro.fallpro_emails
         emails.each do |email|
           logger.info "sending fallpro email ...."
           MainMailer.fallpro_report(@fallpro.id, email).deliver
         end
-        redirect_to fallpro_fallpro_path(fallpro_id: @fallpro.id), notice: "Emails sent!"
+        redirect_to fallpro_path(fallpro_id: @fallpro.id), notice: "Emails sent!"
 
 
 
       elsif @fallpro.update_attributes(fallpro_params)
-        redirect_to fallpro_fallpro_index_path, notice: "Updated successfully!"
+        redirect_to fallpro_index_path, notice: "Updated successfully!"
 
       else
         logger.info @fallpro.errors.full_messages.to_sentence

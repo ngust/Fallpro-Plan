@@ -1,0 +1,37 @@
+.admin_logo {
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	position: relative;
+	border:1px solid #007bff;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+.admin_logo img{
+	float: right;
+	height: 100%;
+	position: absolute;
+    margin: auto; 
+    min-width: 100%;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    z-index: 0;
+}
+.admin_logo:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+   opacity: 0.7;
+   -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+	}
+
+	.svg-green  {
+	filter: invert(40%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+	}
+		.svg-blue  {
+	filter: invert(30%) sepia(80%) saturate(2800%) hue-rotate(191deg) brightness(100%) contrast(102%);
+	}

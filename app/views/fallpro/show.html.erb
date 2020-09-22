@@ -7,10 +7,10 @@
 
 <div class="container">
 	<div class="no_pdf">
-		<%= link_to "Generate PDF", fallpro_fallpro_print_report_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
+		<%= link_to "Generate PDF", fallpro_print_report_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
 	</div>
 	<div class="no_pdf">
-		<%= link_to "Send Emails", fallpro_fallpro_emails_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
+		<%= link_to "Send Emails", fallpro_emails_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
 	</div>
 	
 	<div class="cert_top_header" style="clear:both;">

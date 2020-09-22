@@ -1,0 +1,74 @@
+// Place all the styles related to the inspection_observations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.obs-edit-button {
+	margin: 0 !important;
+	margin-left: 15px !important;
+    float: right !important;
+}
+    
+
+#reg-fields {
+	display: none;
+	background: #e0f9ff;
+	padding: 8px;
+}
+
+.pdf-obs-header {
+	height: 60px;
+	padding: 12px;
+	// width: 100%;
+	// align-items: flex-start;
+	justify-content: space-between;
+	padding-left: 100px;
+	border: 1px solid #303030 !important;
+    border-top: 1px solid #303030 !important;
+    background: #cccccc !important;
+    span {
+    	padding: 12px;
+    	font-family: 'raleway';
+    	font-size: 20px;
+    	height: 34px;
+    	width: 100%;
+    }
+
+}
+
+.pdf-obs-sub-header {
+	height: 60px;
+	border: 1px solid #303030 !important;
+    border-top: none !important;
+	span {
+		width: 50%;
+		padding: 0 25px;
+		font-family: 'raleway';
+    	font-size: 20px;
+	}
+	.obs-data-text {
+		padding: 12px;
+		border-right: 1px solid #303030 !important;
+	}
+	.compliance {
+		padding: 12px;
+	}
+}
+.pdf-obs-data {
+	justify-content: flex-start;
+	display: flex;
+	padding: 12px;
+	min-height: 60px;
+	border: 1px solid #303030 !important;
+    border-top: none !important;
+    font-family: 'raleway';
+    	font-size: 20px;
+   .pdf-obs-image-wrapper {
+   		align-self: flex-end !important;
+	    width: 400px;
+	    max-height: 400px;
+	    // padding: 15px;
+	    img {
+	        width: 100%;
+	        padding: 15px;
+	    }
+	}
+}

@@ -1,0 +1,151 @@
+.worker_logo {
+	height: 300px;
+	width: 300px;
+	overflow: hidden;
+	position: relative;
+	border:15px solid #007bff;
+	border-radius: 50%;
+}
+.worker_logo img{
+	// height: 100%;
+	// width: calc(height);
+	// border-radius: 50%;
+	float: right;
+	margin-right: 15%;
+	// border:15px solid #007bff;
+
+
+	height: 100%;
+	// width: 100%;
+	// height: 80%;
+	// border-radius: 50%;
+	float: left;
+	// margin: 15% 0 0 15%;
+
+	// border:15px solid #007bff;
+	position: absolute;
+    margin: auto; 
+    // min-height: 100%;
+    min-width: 100%;
+
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+}
+.worker_logo:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+   opacity: 0.7;
+   -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+	}
+.worker-header {
+	float: left;
+}
+.worker-header td{
+	font-size: 25px;
+	font-weight: bold;
+}
+.worker-header-logo {
+	float: right;
+}
+.worker-header-main {
+	text-align: center;
+	margin-bottom: 25px;
+}
+.worker-emergency td{
+	font-size: 25px;
+	font-weight: bold;
+}
+.data-row {
+	margin: 40px 0;
+}
+.expired {
+	font-weight: 900;
+	color: red;
+}
+
+.profile_check {
+	height: 20px;
+	margin-left: 10%;
+}
+.no_data {
+	// width: 50vw;
+	text-align: center;
+	color: red;
+	margin-left: 45vw;
+	margin-right: 45vw;
+	font-weight: bold;
+}
+
+.critical-th {
+	min-width: 100px;
+}
+
+.worker-extra {
+	display: none;
+}
+.sub-con {
+	text-align: center; 
+	background: dodgerblue;
+}
+
+.sub-border {
+    box-shadow: inset 0px 0px 0px 1px dodgerblue;
+    td {
+    	padding: 0.25rem 20px !important;
+    }
+}
+
+.exisitng_profile_pic {
+	width: 200px;
+    height: 200px;
+    padding: 0 0 7.5% 15%;
+    float: right;
+    position: relative;
+    margin: 0 auto;
+}
+.exisitng_profile_pic img {
+    height: 100%;
+    float: left;
+    position: absolute;
+    margin: auto;
+    min-width: 100%;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+ }
+.exisitng_profile {
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+	border: 2px solid #d4d2d2;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 25px;
+}
+
+.exising_confirm {
+	font-weight: 400;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+		.profile_check {
+	// height: 35px;
+	margin-left: 10%;
+}
+	.worker-headings td{
+		font-size: 14px;
+	}
+	.worker-header-main h1 {
+		font-size: 24px;
+	}
+	.exisitng_profile_pic {
+	width: 250px;
+    height: 250px;
+    float: none;
+}
+	}

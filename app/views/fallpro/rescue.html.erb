@@ -6,7 +6,7 @@
         <span class="onsite-header onsite-small"> Confirmation of rescue availability is the responsibility of the supervisor listed on this document</span>
       </div>
 
-<%=form_for [:fallpro, @fallpro] do |f| %>
+<%=form_for @fallpro do |f| %>
 
   <div >
     <%= render 'rescue_desk', f: f %>

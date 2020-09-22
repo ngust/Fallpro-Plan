@@ -1,0 +1,110 @@
+// Place all the styles related to the tickets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.concern {
+	width: 100%;
+	padding: 10px;
+	height: 170px;
+	border-radius: 10px;
+	background: #f1f0f0;
+	    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+	 margin: 25px;
+	 overflow-y: hidden;
+	 position: relative;
+}
+
+.concern_info {
+	float: left;
+	width: 200px;
+	height: 100px;
+	padding: 0 25px;
+	span {
+		display: block;
+		text-align: center;
+	}
+	text-align: center;
+	a {
+	color: black;
+	text-decoration: none;
+	line-height: 30px;
+	}
+	a:hover {
+	color: black;
+	text-decoration: none;
+	}
+
+	span {
+		display: block;
+		padding: 5px 15px;
+	}
+	.concern_status {
+			padding: 5px 25px;
+			background: orange;
+			max-width: 200px;
+			margin: 0 auto;
+
+		}
+	.concern_status:hover {
+		opacity: 0.7;
+	}
+	.resolved {
+		background: Dodgerblue;
+	}
+}
+
+.concern_data {
+	float: left;
+	width: calc(100% - 200px);
+	height: 100px;
+	overflow-y: auto;
+	padding: 0 25px;
+
+}
+
+.concern_bottom {
+	// float: left;
+	clear: both;
+	width: 100%;
+	height: 50px;
+	// overflow: hidden;
+	padding: 0 10px;
+	font-size: 12px;
+
+}
+
+.concern_priority {
+	float: right
+}
+
+.remove_concern {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	img {
+		width: 10px;
+	}
+}
+
+.concerns-sites-table {
+	span {
+		padding: 10px;
+		
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.concern_info {
+		width: 100%
+	}
+
+	.concern_data {
+		width: 100%;
+		height:150px;
+	}
+	.concern {
+		height:315px;
+	}
+
+}

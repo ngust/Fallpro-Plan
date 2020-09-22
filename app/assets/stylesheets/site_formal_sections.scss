@@ -1,0 +1,37 @@
+// Place all the styles related to the site_formal_sections controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.formal-section-action {
+	background: #e0f9ff;
+	padding: 0.75rem;
+	// min-height: 100px;
+	height: 100%;
+	span {
+		font-weight: 500;
+	}
+}
+.formal-section-td {
+	padding: 0 !important;
+	 height: 100px;
+	 // min-height: 1px;
+	a, a:hover {
+		text-decoration: none;
+		color: rgb(33, 37, 41);
+		height: 100%;
+		// width: 100%;
+		// display:inline-block;
+	}
+}
+
+.formal-section-td:hover, .formal-section-action:hover  {
+    border: 2px dashed #999999;
+    background: #e0f9ff !important;
+}
+
+.site-section-radio input {
+	    width: 26px;
+    display: inline-block;
+    height: 26px;
+    margin-right: 15px	
+}

@@ -1,0 +1,31 @@
+// Place all the styles related to the concern_changes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.concern_changes {
+	width: calc( 100% - 50px);
+	padding: 10px;
+	border-radius: 10px;
+	background: #999999;
+	    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	 margin: -20px 25px 25px 50px;
+	 overflow-y: hidden;
+	 position: relative;
+
+	 .concern_change_text {
+	 	width: 100%;
+	 	background: #fff;
+	 	border-radius: 10px;
+	 	height: 50px;
+	 	padding: 10px;
+	 	overflow-y: auto;
+	 }
+	 .concern_change_time{
+	 	font-size: 12px;
+	 }
+	 
+}
+
+#concern_button {
+	padding: 10px 80px;
+}

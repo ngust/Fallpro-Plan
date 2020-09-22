@@ -1,0 +1,57 @@
+// Place all the styles related to the covid controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$sling-red: #dc3545;
+
+#error_explanation {
+	h2 {
+		color: red;
+	}
+}
+
+.covid-numbers {
+	padding: 1.25rem !important;
+	vertical-align: middle !important;
+	width: 200px !important;
+}
+
+#covid-form-fields {
+	.nowrap {
+		white-space: nowrap !important;
+	}
+	input[type='radio'] { transform: scale(1.4); }
+	i {
+		margin-left: 8px;
+		color: $sling-red;
+	}
+	span {
+		color: $sling-red;
+		font-weight: 900;
+	}
+	label {
+		margin-right: 8px;
+		color: $sling-red;
+		font-weight: 900;
+	}
+}
+
+.covid-button {
+	background: #70f584 !important;
+	color: #fff;
+	font-weight: 900;
+}
+
+
+#covid-fields-desk, #covid-header-desk {
+
+	@media screen and (max-width: 700px) { 
+		display: none;
+	}
+}
+
+#covid-fields-mob, #covid-header-mob {
+	display: none;
+	@media screen and (max-width: 700px) { 
+		display: block;
+	}
+}

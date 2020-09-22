@@ -3,7 +3,7 @@
                 <span class="onsite-header">Fall Pro Plan</span></br>
         <span class="onsite-header onsite-small">Section 3: Using the hierarchy of controls, these are the system(s) we will use</span>
       </div>
-<%=form_for [:fallpro, @fallpro] do |f| %>
+<%=form_for @fallpro do |f| %>
 
   <div >
     <%= render 'systems_desk', f: f %>

@@ -1,0 +1,12 @@
+// Place all the styles related to the statements controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+form .email_button {
+	background-color: #007bff;
+	padding: 8px, 20px !important;
+}
+
+form .email_button:hover {
+	border: none;
+}

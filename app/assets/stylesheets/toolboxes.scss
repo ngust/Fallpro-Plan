@@ -1,0 +1,137 @@
+// Place all the styles related to the toolboxes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.remove_answer {
+	margin-left: 15px;
+	margin-top: 10px;
+	img {
+		width: 20px;
+	}
+}
+
+.remove_answer:hover {
+	-webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(180deg) saturate(600%) contrast(0.8);
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+/// PDF STUFF
+
+#toolbox_pdf_container {
+	max-width: 1500px;
+}
+
+.toolbox_pdf_table {
+	  font-family: 'raleway';
+	  font-size: 20px;
+	/*  border: 1px solid #303030;*/
+	  th, td {
+	  	border: 1px solid #303030 !important;
+	  	border-top : 1px solid #303030 !important;
+	  }
+}
+.toolbox_pdf_header {
+	text-align: center;
+	span {
+		font-weight: 700;
+		font-size: 22px;
+	}
+}
+
+.toolbox_pdf_header_small {
+display: none;
+	text-align: center;
+	span {
+		font-weight: 700;
+		font-size: 16px;
+	}
+}
+
+.pdf-gray {
+	background: #999999 !important;
+	text-align: left;
+}
+
+.pdf-light-gray {
+	background: #cccccc !important;
+}
+
+.letter-list {
+	 counter-reset: item;
+    list-style-type: lower-alpha;
+
+    li:before {
+	    counter-increment: item;
+	}
+}
+.concerns-table {
+	td {
+		width: 25%;
+	}
+}
+
+.concerns-table {
+	td {
+		width: 20%;
+	}
+}
+
+#empty-row {
+	tr, td {
+		border: none !important;; 
+		border-top: none !important;
+	}
+}
+
+.concern_status {
+			padding: 5px 25px;
+			background: orange;
+			max-width: 200px;
+			margin: 0 auto;
+
+		}
+	.concern_status:hover {
+		opacity: 0.7;
+	}
+	.resolved {
+		background: Dodgerblue;
+	}
+.signature-text {
+	float: left;
+	font-family: 'raleway';
+	  font-size: 28px;
+	  font-weight: 600;
+}
+.signature {
+    border: 0;
+    border-bottom: 1px solid #000;
+    width: 500px;
+    float: left;
+    height: 42px;
+    margin-left: 15px;
+   }
+
+ .tbt_show_concerns{
+
+ 	.concern {
+ 		width:auto !important;
+ 	}
+ }
+ .tbt_btn {
+ 	width:auto;
+ 	float: left
+ }
+
+ #small_screen_tbt_header {
+ 	display: none;
+ }
+
+ #site_inspection_review_tbt {
+ 	margin-bottom: -25px;
+ }
+
+ @media screen and (max-width: 600px) {
+
+ }

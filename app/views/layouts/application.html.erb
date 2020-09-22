@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fpp</title>
+    <title>Wethesafe</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
 
-  <body>
-    <%= yield %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,500,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <%= javascript_pack_tag 'application' %>
+   
+  </head>	
+
+ 	 <body>
+
+
+
+    <% if notice %>
+      <div id="notice_wrapper">
+        <p><%= notice %></p>
+      </div>
+    <% elsif alert %>
+      <div id="notice_wrapper">
+        <p><%= alert %></p>
+      </div>
+    <% end %>
+    <div id='remote_container'></div>
+  <!-- <div id="notice_wrapper">
+        <p><%= @current_resource ? @current_resource : "No current_resource" %></p>
+      </div>  -->
+   
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/mainheader' %>
+      <div id="main_div">
+
+      <%= yield %>
+    </div>
+
+
+      <%= render 'layouts/footer' %>
+
+<!--      <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> -->
+    <script>
+      $(document).ready(function(){
+        setTimeout(function(){
+          $("#notice_wrapper").fadeOut("slow", function(){
+            $(this).remove();
+          })
+        }, 4500);
+        $("#notice_wrapper").click(function(){
+          console.log("Clicked");
+          $(this).remove();
+          });
+      });
+    </script>
+
+
+    
   </body>
 </html>

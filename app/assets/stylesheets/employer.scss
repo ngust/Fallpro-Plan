@@ -1,0 +1,139 @@
+
+.emp-header-logo {
+	float: left;
+}
+.emp-header {
+	float: right;
+}
+.emp-header td{
+	font-size: 25px;
+	font-weight: bold;
+}
+.emp_logo {
+	height: 350px;
+	width: 350px;
+	padding: 7.5% 0 7.5% 15%;
+	overflow: hidden;
+	position: relative;
+	border:15px solid #007bff;
+	// border-radius: 50%;
+}
+.emp_logo img{
+	height: 100%;
+	// width: 100%;
+	// height: 80%;
+	// border-radius: 50%;
+	float: left;
+	// margin: 15% 0 0 15%;
+
+	// border:15px solid #007bff;
+	position: absolute;
+    margin: auto; 
+    // min-height: 100%;
+    min-width: 100%;
+
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+}
+.emp_logo:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+   opacity: 0.7;
+   -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+	}
+#add_workers {
+	display: none;
+}
+#add_workers_table {
+	height: 400px;
+	overflow-Y: scroll;
+}
+#add_workers_table input[type='checkbox']  {
+-ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+
+}
+.chart-emp-pro {
+	width: 100%;
+	float: left;
+}
+.violations-table {
+		width: 50%;
+		float: left;
+}
+.cor_cert {
+	border: 1px solid #000;
+	padding: 15px;
+	padding-left: 50px;
+	margin: 20px;
+}
+.cor_logo {
+	max-width: 30%;
+	// height:  350px;
+	float: left;
+}
+.cor_dates {
+	max-width: 70%;
+	// height:  350px;
+	float: left;
+}
+.cor_logo img{
+	width: 95%;
+	// height:  350px;
+}
+.dash_chart {
+	height: 300px;
+}
+.emp_name_profile {
+		display: none;
+		    font-size: 35px;
+    font-weight: 800;
+	}
+
+#worker-add-modal {
+	max-width: 800px;
+}
+
+.subIndicator {
+	background: Dodgerblue;
+	padding: 6px 4px;
+	border-radius: 5px;
+}
+@media screen and (max-width: 1200px) {
+	.emp_logo {
+	padding: 0;
+	}
+	.emp_logo img{
+	height: 80%;
+	}
+
+}
+@media screen and (max-width: 500px) {
+	.chart-emp-pro {
+		width: 100%
+	}
+	.violations-table {
+		width: 100%
+	}
+	.cor_logo {
+		max-width: 100%;
+		width: 100%;
+	}
+	.cor_dates {
+		max-width: 100%;
+		width: 100%;
+	}
+	.emp_name {
+		display: none;
+	}
+	.emp_name_profile {
+		display: block;
+	}
+}
+

@@ -1,0 +1,63 @@
+.pdf-cert{
+  height: 680px;
+  width: 980px;
+  background-image: url('http://127.0.0.1:3000/assets/card_bg_template.png'); 
+  background-size: 100% 100%;
+  position: absolute;
+   font-family: "Raleway";
+    font-weight: 500;
+    font-size: 28px;
+    color: black;
+}
+.card-small{
+  font-size: 20px;
+  padding-top: 8px;
+}
+
+.work-name{
+  position: relative;
+    left: 215px;
+    top: 218px;
+    width: calc(980px - 215px);
+   
+}
+.work-id{
+
+  position: relative;
+    left: 800px;
+    top: 37px;
+    
+}
+
+.work-emp{
+  margin-right: 20px;
+  float: right
+}
+
+.trainer{
+  position: relative;
+    left: 300px;
+    top: 464px;   
+}
+
+.trainer img {
+  height: 50px;
+  width: 180px;
+  margin-left: 25px;
+  vertical-align: bottom;
+}
+.course{
+  position: relative;
+    left: 0px;
+    top: 225px;   
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.card-date{
+  position: relative;
+    left: 490px;
+    top: 290px;   
+}
+

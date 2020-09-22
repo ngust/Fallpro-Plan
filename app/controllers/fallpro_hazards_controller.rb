@@ -24,8 +24,8 @@ class FallproHazardsController < ApplicationController
 
 
 	 if @hazard.save
-	    # redirect_to fallpro_fallpro_index_path, notice: "Hazard Created successfully!"
-	    redirect_to fallpro_fallpro_hazard_power_lines_path(@hazard), notice: "Updated successfully!"
+	    # redirect_to fallpro_index_path, notice: "Hazard Created successfully!"
+	    redirect_to fallpro_hazard_power_lines_path(@hazard), notice: "Updated successfully!"
 	  else
 	  logger.info "XXXXXX #{@hazard.errors.full_messages.to_sentence}"
 	  end
@@ -35,9 +35,9 @@ class FallproHazardsController < ApplicationController
    def update
    	@hazard = FallproHazard.find(params[:id])
    	  if params[:hazardedit] && @hazard.update_attributes(fallpro_hazard_params)
-          redirect_to fallpro_fallpro_path(@hazard.fallpro, fallpro_id: @hazard.fallpro), notice: "Updated successfully!"
+          redirect_to fallpro_path(@hazard.fallpro, fallpro_id: @hazard.fallpro), notice: "Updated successfully!"
       elsif @hazard.update_attributes(fallpro_hazard_params)
-        redirect_to fallpro_fallpro_systems_path(@hazard.fallpro), notice: "Updated successfully!"
+        redirect_to fallpro_systems_path(@hazard.fallpro), notice: "Updated successfully!"
 
       else
         logger.info @hazard.errors.full_messages.to_sentence

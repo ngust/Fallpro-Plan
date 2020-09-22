@@ -1,0 +1,26 @@
+// Place all the styles related to the pdfs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.scrollable {
+	max-height: 500px;
+	overflow-y:auto;
+}
+
+.pdf_add {
+	float: left;
+}
+
+.toggle-cat {
+	display: none;
+}
+
+.cat-headers {
+	cursor: pointer;
+}
+
+.cat-headers:hover {
+	box-shadow: 0 0 10px  #70f584;
+
+	 transition: all 0.5s ease;
+}

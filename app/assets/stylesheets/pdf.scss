@@ -1,0 +1,19 @@
+ .no_pdf {
+    display: inline;
+  }
+   .pdf_only {
+  	display: none;
+  }
+@media print {
+
+  
+  .no_pdf {
+    display: none;
+  }
+  .pdf_only {
+  	display: block;
+  }
+}
+
+ 
+
