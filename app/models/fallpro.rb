@@ -10,7 +10,7 @@ class Fallpro < ApplicationRecord
 
   serialize :how_rescue
 
-  # mount_uploader :sketch, ImageUploader
+  mount_uploader :sketch, ImageUploader
 
   # accepts_nested_attributes_for :fallpro_steps, allow_destroy: true, :reject_if => :all_blank
   accepts_nested_attributes_for :fallpro_steps, allow_destroy: true, :reject_if => lambda { |attributes|
