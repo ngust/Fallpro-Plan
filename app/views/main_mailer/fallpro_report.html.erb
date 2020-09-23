@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="background-color: #EEEEEE;margin:0px;padding:0px;">
+  <div style="max-width: 401px;margin: 50px auto;">
+    <div style="margin-bottom: 30px;border-top:3px solid #4285f4;border-radius: 3px;background-color: #ffffff;">
+      <div style="text-align: center;margin-bottom: 20px;padding-top: 40px;padding-bottom: 0;">
+        <img src="https://qrsafety.com/assets/qrsafetylogo.png" style="width: 150px;border: 0;">
+        <div style="padding: 30px 30px 15px;">
+          <div style="padding:20px 0px;font-family:Verdana;text-align: center;font-weight: 300;color:#444444;">
+            <span style="display: block;font-size: 17px;">
+              Fall Pro Plan
+            </span>
+            <p style="font-size: 13px;margin:40px 0px 40px 0px;">
+             Hi,</p>
+
+
+          <p>A Fall Protection Plan has been created and sent to you.</p>
+
+           <p>Here is some information on the Fall Pro Plan:</p>
+          <div class="inspection-event-show" style="    text-align: left;
+    padding-left: 25px;">
+                <h4>Company Name: <%= @fallpro.company %></h4>
+                <h4>Date: <span class="rental_thin"><%= @fallpro.created_at? ? @fallpro.created_at: Date.today  %></span></h4>
+                <h4>Created By: <span class="rental_thin"><%= @fallpro.supervisor %></span></h4>
+                
+               
+               <p><%= link_to "PDF Report",fallpro_print_report_url(@fallpro)  %></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
