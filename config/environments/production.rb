@@ -122,8 +122,4 @@ Rails.application.configure do
       :domain         => 'wethesafe.com',
       :enable_starttls_auto => true
   }
-
-  config.public_file_server.enabled = true
-  config.hosts <<  "fallproplan.com"
-
 end
