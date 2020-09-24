@@ -110,6 +110,8 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
+
   config.action_mailer.default_url_options = { :host => "fallproplan.com" }
   config.action_mailer.asset_host = 'https://fallproplan.com'
 
