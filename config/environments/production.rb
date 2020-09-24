@@ -123,4 +123,6 @@ Rails.application.configure do
       :enable_starttls_auto => true
   }
 
+  config.hosts <<  /[a-z0-9]+\.fallpro\.com/
+
 end
