@@ -111,7 +111,9 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   config.action_mailer.default_url_options = { :host => "fallproplan.com" }
+  config.action_mailer.asset_host = 'https://fallproplan.com'
 
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address        => 'smtp.office365.com',
