@@ -11,6 +11,9 @@ require("channels")
 import 'bootstrap';
 import "cocoon";
 import "signature_pad";
+import 'bootstrap/js/dist/modal'
+
+
 //require('packs/sigpad2.js')
 // require('packs/signature_pad.js')
 
