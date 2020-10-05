@@ -57,7 +57,8 @@
 
   <script>
   $( function() {
-    $('#yes-can-drop').click(function() {
+    $('#yes-can-drop').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')
@@ -66,7 +67,8 @@
       $('#fallpro_hazard_can_drop').val(true)
       });
 
-    $('#no-can-drop').click(function() {
+    $('#no-can-drop').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')

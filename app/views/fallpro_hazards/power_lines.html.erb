@@ -74,7 +74,8 @@
 
   <script>
   $( function() {
-    $('#yes-power').click(function() {
+    $('#yes-power').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')
@@ -83,7 +84,8 @@
       $('#fallpro_hazard_power_lines').val(true)
       });
 
-    $('#no-power').click(function() {
+    $('#no-power').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')
@@ -92,7 +94,8 @@
       $('#fallpro_hazard_power_lines').val(false)
       });
 
-    $('#yes-holes').click(function() {
+    $('#yes-holes').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')
@@ -101,7 +104,8 @@
       $('#fallpro_hazard_holes').val(true)
       });
 
-    $('#no-holes').click(function() {
+    $('#no-holes').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')

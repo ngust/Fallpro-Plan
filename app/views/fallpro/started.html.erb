@@ -32,7 +32,8 @@
 
   <script>
   $( function() {
-    $('#yes-super').click(function() {
+    $('#yes-super').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')
@@ -41,7 +42,8 @@
       $('#super-yes-form').show()
       });
 
-    $('#no-super').click(function() {
+    $('#no-super').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')

@@ -88,7 +88,9 @@
 
   <script>
   $( function() {
-    $('#yes-cons').click(function() {
+    console.log("Jquery working");
+    $('#yes-cons').click(function(e) {
+      e.preventDefault();
       test = $(this)
       console.log(test)
       test.addClass('super-button-clicked')
@@ -97,9 +99,11 @@
       $('#site-no-form').hide()
       });
 
-    $('#no-cons').click(function() {
+    $('#no-cons').click(function(e) {
+       e.preventDefault();
       test = $(this)
       console.log(test)
+      console.log("no button clicked");
       test.addClass('super-button-clicked')
       $('#yes-cons').removeClass('super-button-clicked')
       $('#site-yes-form').hide()
