@@ -1,0 +1,29 @@
+.local-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  img {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  span {
+    font-size: 30px;
+    font-family: 'raleway';
+    font-weight: 200;
+     @media screen and (min-width: 850px) {
+        white-space: nowrap;
+      }
+    @media screen and (max-width: 700px) {
+        display: block;
+      }
+  }
+  p {
+    // font-size: 30px;
+    font-family: 'raleway';
+    font-weight: 300;
+    @media screen and (max-width: 700px) {
+        font-size: 20px; 
+      }
+  }
+}
