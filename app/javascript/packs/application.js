@@ -11,6 +11,7 @@ import jquery from 'jquery';
 window.$ = window.jquery = jquery;
 import "bootstrap";
 import "cocoon";
+// import "signature_pad";
 
 
 //require('packs/sigpad2.js')
