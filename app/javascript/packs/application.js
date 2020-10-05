@@ -3,17 +3,14 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-
-import "cocoon";
-import "signature_pad";
-import 'bootstrap';
-import 'bootstrap/js/dist/modal'
-
 require("@rails/ujs").start()
-// require("turbolinks").start()
-
+require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+import jquery from 'jquery';
+window.$ = window.jquery = jquery;
+import "bootstrap";
+import "cocoon";
 
 
 //require('packs/sigpad2.js')
