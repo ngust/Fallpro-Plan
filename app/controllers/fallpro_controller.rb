@@ -170,7 +170,7 @@ class FallproController < ApplicationController
     @site = FallproSite.where(fallpro: @fallpro.id).last
     @hazard = FallproHazard.where(fallpro: @fallpro.id).last
     html = render_to_string(:action => "show", :layout => 'layouts/pdf', :locals => {:@fallpro => @fallpro, :@site => @site, :@hazard => @hazard })
-    css =  "#{Rails.public_path}/assets/pdf-data.css"
+    css =  "#{Rails.public_path}/pdf-data.css"
     pdf = PDFKit.new(html, :page_size => 'Letter')
     pdf.stylesheets << css
     send_data pdf.to_pdf, filename: "#{@fallpro.created_at}-FallProPlan.pdf"
