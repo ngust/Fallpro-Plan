@@ -7,7 +7,7 @@
 
 <div class="container">
 	<div class="no_pdf">
-		<%= link_to "Generate PDF", fallpro_print_report_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
+		<%= link_to "Generate PDF", fallpro_print_report_url(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button", data: {turbolinks: false} %>
 	</div>
 	<div class="no_pdf">
 		<%= link_to "Send Emails", fallpro_emails_path(@fallpro), class: "btn btn-primary exam_button tbt_btn" ,id: "generate-pdf-button" %>
@@ -45,7 +45,7 @@
 		</div>
 	</div>
 
-	
+
 
 	<div id="site_inspection_overview"> 
 		<table  class="table toolbox_pdf_table concerns-table" id="site-ins-overview">

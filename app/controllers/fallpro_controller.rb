@@ -173,7 +173,7 @@ class FallproController < ApplicationController
     css =  "#{Rails.public_path}/pdf-data.css"
     pdf = PDFKit.new(html, :page_size => 'Letter')
     pdf.stylesheets << css
-    send_data pdf.to_pdf, filename: "#{@fallpro.created_at}-FallProPlan.pdf"
+    send_data pdf.to_pdf, filename: "#{@fallpro.created_at}-FallProPlan.pdf", type: 'application/pdf', disposition: 'attachment'
   end
 
    private
