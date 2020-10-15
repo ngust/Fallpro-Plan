@@ -247,6 +247,14 @@
 			</tr>
 			<tr>
 				<td colspan="10" class="nowrap">
+					<%= f.label :lanyard do %>
+						<%= f.radio_button :lanyard , false, required: true %>
+						No – I will not use a lanyard
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" class="nowrap">
 					<%= f.label :lanyard_type  do %>
 					    A specific lanyard needed:
 						<%= f.text_field :lanyard_type %>
