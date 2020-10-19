@@ -31,7 +31,7 @@
                   On a sloped surface?
                 </div>
                 <div class="col-md-6">
-                 <div class="super-buttons">
+                 <div>
 
                 <%= link_to "Yes", "#", class: "btn btn-primary exam_button", id: "yes-cons"  %>
                 <%= link_to "No", "#", class: "btn btn-primary exam_button", id: "no-cons" %>
@@ -45,6 +45,8 @@
                 <div>
                    <%= f.label :worktype, "What type of work are you doing?" %><br>
                   <%= f.select :worktype, [ 'Formwork', "Roofing", "Scaffold erection", "Painting", "Drywall", "Steel stud install", "Wood framing", "Truss install", "Maintenance of building", "User defined"], {}, required: true, class: 'exam_forms form-control' %><br />
+
+                   <%= f.text_field :worktype, placeholder: "Enter type of work here", class: 'form-control exam_forms', id: 'fallpro_site_worktype_text' %>
                 </div>
                 
 
@@ -81,5 +83,13 @@
       $('#yes-cons').removeClass('super-button-clicked')
       $('#slope-type').hide()
       });
+
+    $('#fallpro_site_worktype').change(function() {
+      var data = $(this).val();
+      console.log(data);
+      if (data == "User defined") {
+        $('#fallpro_site_worktype_text').show()
+      }
+    });
   });
 </script>
