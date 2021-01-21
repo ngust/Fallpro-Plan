@@ -21,7 +21,23 @@
       test.addClass('super-button-clicked')
       $('#lifeline_title').addClass('super-button-clicked')
       $('#lifeline_length').show(200)
+      $('#anchor_user_defined').hide()
       });
+    $('#fallpro_connect_anchor_user_defined').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#anchor_user_defined').show(200)
+      $('#lifeline_length').hide();
+      });
+    $('#fallpro_connect_anchor_retractable_device').click(function() {
+      test = $(this)
+      console.log(test)
+      test.addClass('super-button-clicked')
+      $('#anchor_user_defined').hide()
+      $('#lifeline_length').hide();
+      });
+
 
     $('#fallpro_connect_anchor_retractable_device').click(function() {
       test = $(this)

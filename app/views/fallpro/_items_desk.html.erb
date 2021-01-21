@@ -158,6 +158,23 @@
 					<% end %>
 				</td>
 			</tr>
+			</tr>
+				<td colspan="10" class="nowrap">
+					<%= f.label :connect_anchor do %>
+						<%= f.radio_button :connect_anchor, "user_defined" %>
+						User Defined
+					<% end %>
+				</td>
+			</tr>
+			<tr id="anchor_user_defined" style="display: none;">
+				<td colspan="10" class="nowrap">
+					<%= f.label :connect_anchor do %>
+						Enter Anchor Type:
+						<%= f.text_field :connect_anchor %>
+						
+					<% end %>
+				</td>
+			</tr>
 
 			<tr>
 				<td colspan="10" style="padding: 0;">
